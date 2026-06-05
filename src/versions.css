@@ -234,3 +234,43 @@
   border-color: hsl(0 0% 16%);
   box-shadow: none;
 }
+
+/* ════════════════════════════════════════════════
+   REVEAL ANIMATIONS (used by useReveal hook)
+   ════════════════════════════════════════════════ */
+[data-reveal] {
+  opacity: 0;
+  transform: translateY(14px);
+  transition: opacity 0.7s cubic-bezier(0.22, 1, 0.36, 1),
+              transform 0.7s cubic-bezier(0.22, 1, 0.36, 1);
+  will-change: opacity, transform;
+}
+[data-reveal][data-revealed="true"] {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Marquee keyframes for V3 operator voices */
+@keyframes marquee {
+  0%   { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+.scrollbar-hide::-webkit-scrollbar { display: none; }
+.scrollbar-hide { -ms-overflow-style: none; scrollbar-width: none; }
+
+/* V3 condensed display font for the Field Manual headings */
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&display=swap');
+.display-condensed {
+  font-family: 'Oswald', 'Barlow Condensed', system-ui, sans-serif;
+  letter-spacing: -0.005em;
+}
+
+/* V3 page-level type tweak — keep V1 components elsewhere intact */
+.v3-manual { font-family: 'Source Sans 3', system-ui, sans-serif; }
+
+/* V2 editorial display utility */
+.v2-editorial .display-serif {
+  font-family: 'Playfair Display', Georgia, serif;
+}
+
+/* V4 wrapper inherits .v4 root tokens already applied to <html> */
