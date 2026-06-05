@@ -95,6 +95,7 @@ const Navbar = () => {
           </Button>
         </div>
       </div>
+      <VersionSwitcher />
     </header>
   );
 };
