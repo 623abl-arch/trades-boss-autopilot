@@ -1,0 +1,159 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Instrument+Serif:ital@0;1&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ─────────────────────────────────────────────────────────────
+   Stripe / Linear-inspired enterprise design system
+   - Light by default (clean white + deep navy primary)
+   - .invert-section flips an arbitrary section to dark (navy)
+   ───────────────────────────────────────────────────────────── */
+
+@layer base {
+  :root,
+  .light {
+    /* Surfaces */
+    --background: 0 0% 100%;            /* pure white */
+    --foreground: 0 0% 6%;              /* near-black, Podium-style */
+
+    --surface: 36 20% 95%;              /* warm cream band (Podium) */
+    --card: 0 0% 100%;
+    --card-foreground: 0 0% 6%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 0 0% 6%;
+
+    /* Brand */
+    --primary: 0 0% 8%;                 /* near-black CTA (Podium) */
+    --primary-foreground: 0 0% 100%;
+    --primary-glow: 0 0% 20%;
+
+    --accent: 14 88% 55%;               /* Podium orange-red link accent */
+    --accent-foreground: 0 0% 100%;
+
+    --secondary: 36 20% 95%;
+    --secondary-foreground: 0 0% 6%;
+
+    --muted: 36 20% 95%;
+    --muted-foreground: 0 0% 38%;
+
+    --destructive: 0 72% 51%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 30 12% 88%;
+    --input: 30 12% 88%;
+    --ring: 0 0% 8%;
+
+    --radius: 0.75rem;
+
+    --callout: 36 20% 95%;
+    --jobber: 88 50% 53%;
+
+    /* Subtle elevation */
+    --shadow-xs: 0 1px 2px 0 hsl(0 0% 0% / 0.04);
+    --shadow-sm: 0 1px 3px 0 hsl(0 0% 0% / 0.06), 0 1px 2px -1px hsl(0 0% 0% / 0.05);
+    --shadow-md: 0 8px 20px -6px hsl(0 0% 0% / 0.08), 0 2px 4px -2px hsl(0 0% 0% / 0.04);
+    --shadow-lg: 0 18px 40px -10px hsl(0 0% 0% / 0.12), 0 4px 8px -4px hsl(0 0% 0% / 0.06);
+
+    --gradient-soft: linear-gradient(180deg, hsl(36 20% 96%), hsl(0 0% 100%));
+    --gradient-hero: linear-gradient(180deg, hsl(36 20% 95%) 0%, hsl(36 20% 95%) 70%, hsl(0 0% 100%) 100%);
+  }
+
+  /* Dark theme - used for explicit .dark <html> AND every .invert-section */
+  .dark,
+  .invert-section {
+    --background: 222 47% 7%;           /* deep navy */
+    --foreground: 210 40% 98%;
+
+    --surface: 222 40% 11%;
+    --card: 222 40% 11%;
+    --card-foreground: 210 40% 98%;
+
+    --popover: 222 40% 11%;
+    --popover-foreground: 210 40% 98%;
+
+    --primary: 0 0% 100%;
+    --primary-foreground: 222 47% 11%;
+    --primary-glow: 222 70% 60%;
+
+    --accent: 217 91% 65%;
+    --accent-foreground: 222 47% 11%;
+
+    --secondary: 222 30% 16%;
+    --secondary-foreground: 210 40% 98%;
+
+    --muted: 222 30% 16%;
+    --muted-foreground: 215 16% 70%;
+
+    --destructive: 0 72% 60%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 222 25% 20%;
+    --input: 222 25% 20%;
+    --ring: 217 91% 65%;
+
+    --callout: 222 40% 13%;
+  }
+
+  * { @apply border-border; }
+
+  html { scroll-behavior: smooth; font-size: 16.5px; }
+
+  body {
+    @apply bg-background text-foreground antialiased;
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+    font-feature-settings: 'cv11', 'ss01', 'ss03';
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+  }
+
+  h1, h2, h3, h4 {
+    letter-spacing: -0.02em;
+  }
+
+  ::selection {
+    background: hsl(var(--primary) / 0.15);
+    color: hsl(var(--primary));
+  }
+}
+
+@layer components {
+  /* Podium-style cream wash for hero/section banners */
+  .hero-wash {
+    background-image: var(--gradient-hero);
+  }
+
+  /* Slanted bottom edge like Podium section dividers */
+  .slant-bottom {
+    clip-path: polygon(0 0, 100% 0, 100% 92%, 0 100%);
+  }
+  .slant-top {
+    clip-path: polygon(0 8%, 100% 0, 100% 100%, 0 100%);
+  }
+
+  /* Subtle dotted grid for dark accent sections */
+  .bg-grid-dark {
+    background-image:
+      radial-gradient(hsl(0 0% 100% / 0.06) 1px, transparent 1px);
+    background-size: 28px 28px;
+  }
+
+  /* Eyebrow label */
+  .eyebrow {
+    @apply inline-flex items-center gap-2 text-xs font-bold uppercase tracking-[0.18em];
+    color: hsl(var(--accent));
+  }
+  .eyebrow::before {
+    content: "";
+    @apply inline-block w-6 h-px;
+    background-color: hsl(var(--accent) / 0.5);
+  }
+
+  /* Soft card */
+  .card-soft {
+    @apply rounded-xl border border-border bg-card;
+    box-shadow: var(--shadow-sm);
+  }
+}
