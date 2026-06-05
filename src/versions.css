@@ -1,0 +1,236 @@
+/* ─────────────────────────────────────────────────────────────
+   Multi-version theme overrides
+   - .v1 = default (defined in index.css :root)
+   - .v2 = Editorial newspaper
+   - .v3 = Warm industrial utility
+   - .v4 = Clean dark minimal (forces .dark too)
+   Overrides happen via CSS custom properties + a handful of
+   structural rules so existing components reshape themselves.
+   ───────────────────────────────────────────────────────────── */
+
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;800;900&family=DM+Sans:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700;800&family=Source+Sans+3:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+/* ════════════════════════════════════════════════
+   VERSION 2 — Editorial newspaper
+   Pure white, near-black text, muted orange-red accent.
+   Serif headlines, sans body. Sharp corners, hairline rules.
+   ════════════════════════════════════════════════ */
+.v2 {
+  --background: 0 0% 100%;
+  --foreground: 0 0% 7%;
+  --surface: 0 0% 100%;
+  --card: 0 0% 100%;
+  --card-foreground: 0 0% 7%;
+  --popover: 0 0% 100%;
+  --popover-foreground: 0 0% 7%;
+  --primary: 0 0% 7%;
+  --primary-foreground: 0 0% 100%;
+  --primary-glow: 0 0% 20%;
+  --accent: 13 65% 48%;            /* #C94A2C muted orange-red */
+  --accent-foreground: 0 0% 100%;
+  --secondary: 0 0% 96%;
+  --secondary-foreground: 0 0% 7%;
+  --muted: 0 0% 96%;
+  --muted-foreground: 0 0% 35%;
+  --border: 0 0% 7%;               /* Hairline rules in true black */
+  --input: 0 0% 80%;
+  --ring: 0 0% 7%;
+  --radius: 0rem;                  /* Sharp corners everywhere */
+  --callout: 0 0% 96%;
+}
+
+.v2 body {
+  font-family: 'DM Sans', system-ui, sans-serif;
+}
+.v2 h1, .v2 h2, .v2 h3, .v2 .display-serif {
+  font-family: 'Playfair Display', Georgia, serif !important;
+  letter-spacing: -0.015em !important;
+  font-weight: 700;
+}
+.v2 h1 {
+  font-weight: 800;
+}
+/* Tame italic accent spans (e.g. Hero "operating system") to fit editorial */
+.v2 h1 span[style*="Instrument Serif"] {
+  font-family: 'Playfair Display', Georgia, serif !important;
+  font-style: italic !important;
+  font-weight: 700 !important;
+}
+
+/* Strip color washes & rounded soft cards */
+.v2 .hero-wash { background: #fff !important; }
+.v2 .slant-bottom, .v2 .slant-top { clip-path: none !important; }
+.v2 .rounded-xl, .v2 .rounded-2xl, .v2 .rounded-3xl,
+.v2 .rounded-lg, .v2 .rounded-md { border-radius: 0 !important; }
+.v2 .rounded-full { border-radius: 9999px !important; } /* keep pills */
+
+/* Navigation — full-width black bar */
+.v2 header.sticky {
+  background: #0a0a0a !important;
+  border-bottom: 1px solid #0a0a0a !important;
+  backdrop-filter: none !important;
+}
+.v2 header.sticky a, .v2 header.sticky nav button, .v2 header.sticky span {
+  color: #fff !important;
+}
+.v2 header.sticky a[href="#book"]:last-of-type {
+  background: hsl(var(--accent)) !important;
+  color: #fff !important;
+  border-radius: 0 !important;
+}
+
+/* Hairline section separators */
+.v2 section + section {
+  border-top: 1px solid #111;
+}
+
+/* Eyebrow becomes uppercase serif label */
+.v2 .eyebrow { color: hsl(var(--accent)); }
+
+
+/* ════════════════════════════════════════════════
+   VERSION 3 — Warm industrial utility
+   Off-white sand bg, charcoal text, amber + sage accents.
+   Condensed sans display, humanist body. Subtle grain.
+   ════════════════════════════════════════════════ */
+.v3 {
+  --background: 33 33% 93%;        /* #F5F0E8 */
+  --foreground: 30 8% 10%;         /* #1C1A17 */
+  --surface: 33 30% 88%;
+  --card: 33 33% 96%;
+  --card-foreground: 30 8% 10%;
+  --popover: 33 33% 96%;
+  --popover-foreground: 30 8% 10%;
+  --primary: 30 8% 10%;
+  --primary-foreground: 33 33% 96%;
+  --primary-glow: 30 60% 50%;
+  --accent: 33 64% 49%;            /* #C98A2E amber/tan */
+  --accent-foreground: 30 8% 10%;
+  --secondary: 33 30% 88%;
+  --secondary-foreground: 30 8% 10%;
+  --muted: 33 25% 86%;
+  --muted-foreground: 30 8% 30%;
+  --border: 30 15% 72%;
+  --input: 30 15% 72%;
+  --ring: 33 64% 49%;
+  --radius: 0.25rem;
+  --callout: 33 30% 88%;
+}
+
+.v3 body {
+  font-family: 'Source Sans 3', system-ui, sans-serif;
+  /* CSS-only grain overlay */
+  background-image:
+    radial-gradient(hsla(30, 8%, 10%, 0.04) 1px, transparent 1px),
+    radial-gradient(hsla(30, 8%, 10%, 0.03) 1px, transparent 1px);
+  background-size: 3px 3px, 7px 7px;
+  background-position: 0 0, 1px 2px;
+}
+.v3 h1, .v3 h2, .v3 h3, .v3 .display-serif {
+  font-family: 'Barlow Condensed', Impact, sans-serif !important;
+  letter-spacing: 0 !important;
+  font-weight: 700;
+  text-transform: none;
+}
+.v3 h1 { font-weight: 800; }
+
+.v3 h1 span[style*="Instrument Serif"] {
+  font-family: 'Barlow Condensed', sans-serif !important;
+  font-style: normal !important;
+  font-weight: 800 !important;
+  color: hsl(var(--accent)) !important;
+}
+
+/* Navigation — tan/sand */
+.v3 header.sticky {
+  background: hsl(33 30% 88%) !important;
+  border-bottom: 1px solid hsl(30 15% 72%) !important;
+  backdrop-filter: none !important;
+}
+.v3 header.sticky a[href="#book"]:last-of-type {
+  background: hsl(var(--accent)) !important;
+  color: #1C1A17 !important;
+}
+
+.v3 .hero-wash {
+  background: hsl(33 33% 93%) !important;
+}
+.v3 .slant-bottom, .v3 .slant-top { clip-path: none !important; }
+
+/* Category tag (eyebrow) — stamped-in-ink */
+.v3 .eyebrow {
+  color: hsl(var(--accent)) !important;
+  text-transform: uppercase;
+  letter-spacing: 0.22em;
+  border: 1px solid hsl(var(--accent) / 0.4);
+  padding: 2px 8px;
+}
+
+
+/* ════════════════════════════════════════════════
+   VERSION 4 — Clean dark minimal (Linear/Vercel feel)
+   Near-black bg, muted gray text, terminal green accent.
+   Inter throughout, light heading weights.
+   ════════════════════════════════════════════════ */
+.v4 {
+  --background: 0 0% 5%;           /* #0E0E0E */
+  --foreground: 0 0% 91%;          /* #E8E8E8 */
+  --surface: 0 0% 8%;              /* #141414 */
+  --card: 0 0% 10%;                /* #1A1A1A */
+  --card-foreground: 0 0% 91%;
+  --popover: 0 0% 10%;
+  --popover-foreground: 0 0% 91%;
+  --primary: 0 0% 91%;
+  --primary-foreground: 0 0% 5%;
+  --primary-glow: 142 71% 58%;
+  --accent: 142 71% 58%;           /* #4ADE80 terminal green */
+  --accent-foreground: 0 0% 5%;
+  --secondary: 0 0% 13%;
+  --secondary-foreground: 0 0% 91%;
+  --muted: 0 0% 13%;
+  --muted-foreground: 0 0% 53%;    /* #888 */
+  --border: 0 0% 16%;               /* #2A2A2A */
+  --input: 0 0% 16%;
+  --ring: 142 71% 58%;
+  --radius: 0.5rem;
+  --callout: 0 0% 8%;
+  --destructive: 0 72% 60%;
+  --destructive-foreground: 0 0% 100%;
+}
+
+.v4 body {
+  font-family: 'Inter', system-ui, sans-serif;
+  line-height: 1.7;
+}
+.v4 h1, .v4 h2, .v4 h3 {
+  font-family: 'Inter', system-ui, sans-serif !important;
+  font-weight: 400 !important;
+  letter-spacing: -0.02em !important;
+}
+.v4 h1 { font-weight: 300 !important; }
+
+.v4 h1 span[style*="Instrument Serif"] {
+  font-family: 'Inter', system-ui, sans-serif !important;
+  font-style: normal !important;
+  font-weight: 600 !important;
+  color: hsl(var(--accent)) !important;
+}
+
+.v4 .hero-wash {
+  background: radial-gradient(60% 60% at 50% 0%, hsl(0 0% 8%) 0%, hsl(0 0% 5%) 70%) !important;
+}
+.v4 .slant-bottom, .v4 .slant-top { clip-path: none !important; }
+
+.v4 header.sticky {
+  background: hsla(0, 0%, 5%, 0.85) !important;
+  border-bottom: 1px solid hsl(0 0% 13%) !important;
+}
+
+/* Subtle card border tightening */
+.v4 .card-soft {
+  background: hsl(0 0% 10%);
+  border-color: hsl(0 0% 16%);
+  box-shadow: none;
+}

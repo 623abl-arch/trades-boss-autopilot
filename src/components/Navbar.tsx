@@ -1,6 +1,7 @@
 import logo from "@/assets/mep-claw-logo.png";
 import { Button } from "@/components/ui/button";
 import { Phone, FileText, Users, BarChart3, ChevronDown, MessagesSquare, Bot, Layers } from "lucide-react";
+import VersionSwitcher from "@/components/VersionSwitcher";
 
 const mepclawLinks = [
   { href: "/what-is-mepclaw", icon: MessagesSquare, label: "Overview", desc: "What is MEP Claw?" },
@@ -94,6 +95,7 @@ const Navbar = () => {
           </Button>
         </div>
       </div>
+      <VersionSwitcher />
     </header>
   );
 };
