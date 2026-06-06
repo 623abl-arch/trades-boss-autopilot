@@ -94,6 +94,15 @@ const BlogPost = () => {
         </header>
         <div className="container max-w-3xl mx-auto px-6 py-16">
           {renderMarkdown(post.body)}
+          <div className="mt-16 pt-12 border-t border-border text-center">
+            <p className="text-muted-foreground mb-4">Found this interesting?</p>
+            <Link
+              to="/blog"
+              className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-card border border-border font-semibold text-foreground hover:border-[hsl(var(--accent))] hover:text-[hsl(var(--accent))] transition-colors"
+            >
+              Browse more
+            </Link>
+          </div>
         </div>
       </article>
       <CtaFooter />

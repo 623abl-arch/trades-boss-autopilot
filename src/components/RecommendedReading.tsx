@@ -26,7 +26,7 @@ const RecommendedReading = () => (
         </Link>
       </div>
 
-      <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+      <div className="grid md:grid-cols-2 gap-8">
         {posts.filter((p) => p.slug === "what-is-self-hosting" || p.slug === "discord-for-contractors").map((p) => (
           <Link
             key={p.title}
