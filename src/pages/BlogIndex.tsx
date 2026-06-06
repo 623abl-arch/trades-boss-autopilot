@@ -17,10 +17,10 @@ const BlogIndex = () => (
             <BookOpen className="w-3.5 h-3.5" /> FIELD JOURNAL
           </p>
           <h1 className="text-4xl md:text-6xl font-bold text-foreground tracking-tightest leading-[1.05] max-w-4xl">
-            All articles from the field journal.
+            Recommended reading
           </h1>
           <p className="text-lg md:text-xl text-muted-foreground leading-relaxed max-w-2xl mt-6">
-            Three plain-English reads on self-hosting, software ownership, and why Discord works in the field.
+            reads on self-hosting, software ownership, and why Discord works in the field.
           </p>
         </div>
       </section>
