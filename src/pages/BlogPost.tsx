@@ -1,9 +1,15 @@
-import { useParams, Link, Navigate } from "react-router-dom";
+import { useMemo } from "react";
+import { useParams, Link, Navigate, useLocation } from "react-router-dom";
 import { ArrowLeft } from "lucide-react";
 import Navbar from "@/components/Navbar";
 import SiteFooter from "@/components/SiteFooter";
 import CtaFooter from "@/components/CtaFooter";
 import { posts } from "@/content/posts";
+
+type BlogPostLocationState = {
+  backTo?: string;
+  backLabel?: string;
+};
 
 const renderMarkdown = (md: string) => {
   const blocks = md.split(/\n{2,}/);
@@ -47,7 +53,15 @@ const inline = (s: string) =>
 
 const BlogPost = () => {
   const { slug } = useParams();
+  const location = useLocation();
   const post = posts.find((p) => p.slug === slug);
+  const { backTo, backLabel } = useMemo(() => {
+    const state = (location.state as BlogPostLocationState | null) ?? null;
+    return {
+      backTo: state?.backTo ?? "/blog",
+      backLabel: state?.backLabel ?? "Back to all posts",
+    };
+  }, [location.state]);
   if (!post) return <Navigate to="/" replace />;
 
   return (
@@ -61,10 +75,10 @@ const BlogPost = () => {
           <div className="absolute inset-0 opacity-[0.05] [background-image:radial-gradient(circle_at_1px_1px,_hsl(var(--foreground))_1px,_transparent_0)] [background-size:22px_22px] pointer-events-none" />
           <div className="container max-w-3xl mx-auto px-6 pt-32 md:pt-40 pb-20 md:pb-28 relative">
             <Link
-              to="/"
+              to={backTo}
               className="inline-flex items-center gap-2 text-sm font-semibold text-muted-foreground hover:text-[hsl(var(--accent))] mb-10 transition-colors"
             >
-              <ArrowLeft className="w-4 h-4" /> Back to home
+              <ArrowLeft className="w-4 h-4" /> {backLabel}
             </Link>
             <p className="text-xs font-bold tracking-[0.25em] text-[hsl(var(--accent))] mb-6 inline-flex items-center gap-3">
               <span className="h-px w-8 bg-[hsl(var(--accent))]" />

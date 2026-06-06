@@ -2,15 +2,31 @@ import { useEffect } from "react";
 import { useLocation, useNavigationType } from "react-router-dom";
 
 const ScrollToTop = () => {
-  const { pathname } = useLocation();
+  const { pathname, hash } = useLocation();
   const navType = useNavigationType();
+
   useEffect(() => {
-    // Only scroll to top on new navigations (PUSH/REPLACE).
-    // On POP (back/forward), let the browser restore the previous scroll position.
-    if (navType !== "POP") {
+    if (navType === "POP") {
+      return;
+    }
+
+    if (hash) {
+      const id = hash.replace("#", "");
+      const target = document.getElementById(id);
+
+      if (target) {
+        requestAnimationFrame(() => {
+          target.scrollIntoView({ behavior: "auto", block: "start" });
+        });
+        return;
+      }
+    }
+
+    if (navType === "PUSH") {
       window.scrollTo({ top: 0, left: 0 });
     }
-  }, [pathname, navType]);
+  }, [pathname, hash, navType]);
+
   return null;
 };
 

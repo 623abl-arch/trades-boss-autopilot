@@ -18,6 +18,7 @@ import Dashboard from "./pages/features/Dashboard.tsx";
 import DiscordOverview from "./pages/solutions/DiscordOverview.tsx";
 import DiscordBot from "./pages/solutions/DiscordBot.tsx";
 import BlogPost from "./pages/BlogPost.tsx";
+import BlogIndex from "./pages/BlogIndex.tsx";
 import PageScale from "./components/PageScale";
 import ScrollToTop from "./components/ScrollToTop";
 
@@ -45,6 +46,7 @@ const App = () => (
             <Route path="/solutions/discord/bot" element={<DiscordBot />} />
             <Route path="/faq" element={<Faq />} />
             <Route path="/what-is-mepclaw" element={<WhatIsMepClaw />} />
+            <Route path="/blog" element={<BlogIndex />} />
             <Route path="/blog/:slug" element={<BlogPost />} />
             {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
             <Route path="*" element={<NotFound />} />
