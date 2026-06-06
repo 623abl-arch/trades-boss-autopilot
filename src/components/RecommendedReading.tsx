@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import { posts } from "@/content/posts";
 
 const RecommendedReading = () => (
-  <section className="relative bg-background overflow-hidden">
+  <section id="field-journal" className="relative bg-background overflow-hidden scroll-mt-28">
     <div className="pointer-events-none absolute inset-0">
       <div className="absolute inset-0 opacity-[0.06] [background-image:radial-gradient(circle_at_1px_1px,_hsl(var(--foreground))_1px,_transparent_0)] [background-size:22px_22px]" />
     </div>
@@ -17,13 +17,13 @@ const RecommendedReading = () => (
             From the <em className="not-italic font-serif italic">field journal.</em>
           </h2>
         </div>
-        <a
-          href="#"
+        <Link
+          to="/blog"
           className="self-start md:self-auto inline-flex items-center gap-2 text-sm font-semibold text-foreground border-b border-foreground/30 hover:border-[hsl(var(--accent))] hover:text-[hsl(var(--accent))] transition-colors pb-1"
         >
           Browse all posts
           <ArrowUpRight className="w-4 h-4" />
-        </a>
+        </Link>
       </div>
 
       <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -31,6 +31,7 @@ const RecommendedReading = () => (
           <Link
             key={p.title}
             to={`/blog/${p.slug}`}
+              state={{ backTo: "/#field-journal", backLabel: "Back to home" }}
             className="group relative rounded-3xl bg-card border border-border shadow-elevated overflow-hidden flex flex-col transition-all hover:-translate-y-1 hover:shadow-floating"
           >
             <div className={`relative h-48 bg-gradient-to-br ${p.tint} flex items-end p-6`}>
