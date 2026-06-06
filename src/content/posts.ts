@@ -36,7 +36,7 @@ export const posts: Post[] = [
   {
     slug: "discord-for-contractors",
     tag: "Command Center",
-    title: "Why We Use Discord to Run a Plumbing Business (And Why It Works)",
+    title: "Why We Use Discord to Run a Plumbing Business",
     excerpt:
       "Dispatch, crew chat, customer texts, invoices — all running through one free app your techs already know how to use.",
     read: "8 min read",
