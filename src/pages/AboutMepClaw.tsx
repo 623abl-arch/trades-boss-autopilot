@@ -3,6 +3,7 @@ import SiteFooter from "@/components/SiteFooter";
 import { Button } from "@/components/ui/button";
 import idiocracy from "@/assets/idiocracy.png";
 import SavingsCalculator from "@/components/SavingsCalculator";
+import About from "@/components/About";
 
 const chapters = [
   {
@@ -59,6 +60,7 @@ const AboutMepClaw = () => (
       </div>
     </section>
 
+    <About />
     <SavingsCalculator />
 
     <section className="bg-surface slant-top py-24">

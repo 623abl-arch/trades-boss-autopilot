@@ -10,7 +10,7 @@ import RecommendedReading from "@/components/RecommendedReading";
 import Pricing from "@/components/Pricing";
 import Comparison from "@/components/Comparison";
 import WhoItsFor from "@/components/WhoItsFor";
-import About from "@/components/About";
+import OldVsNew from "@/components/OldVsNew";
 import Testimonials from "@/components/Testimonials";
 import CtaFooter from "@/components/CtaFooter";
 import SiteFooter from "@/components/SiteFooter";
@@ -28,7 +28,7 @@ const V1 = () => (
     <CeoQuotes />
     <AiEmployee />
     <Testimonials />
-    <About />
+    <OldVsNew />
     <Comparison />
     <WhoItsFor />
     <Pricing />
