@@ -1,6 +1,6 @@
 import { Check, X } from "lucide-react";
 
-const cols = ["Jobber", "ServiceTitan", "Housecall Pro", "Dr. Plumbing"];
+const cols = ["Jobber", "ServiceTitan", "Housecall Pro", "MEP Claw"];
 
 const rows = [
   { label: "Monthly cost", values: ["$49–$249/user", "$400+/tech", "$299/mo · 5 users", "Under $50/mo"] },
@@ -75,17 +75,17 @@ const Comparison = () => (
           <table className="w-full min-w-[760px]">
             <thead>
               <tr className="border-b border-border bg-surface/60">
-                <th className="text-left p-6 text-xs font-semibold uppercase tracking-wider text-muted-foreground w-[28%]"></th>
+                <th className="text-left p-8 text-sm font-semibold uppercase tracking-wider text-muted-foreground w-[28%]"></th>
                 {cols.map((c, i) => {
                   const claw = i === cols.length - 1;
                   return (
                     <th
                       key={c}
-                      className={`text-left p-6 text-sm font-bold tracking-tight ${
+                      className={`text-left p-8 text-base font-bold tracking-tight ${
                         claw ? "text-[hsl(var(--accent))] bg-[hsl(var(--accent))]/8" : "text-muted-foreground"
                       }`}
                     >
-                      {claw ? <em className="not-italic font-serif italic text-lg">{c}</em> : c}
+                      {claw ? <em className="not-italic font-serif italic text-xl">{c}</em> : c}
                     </th>
                   );
                 })}
@@ -94,11 +94,11 @@ const Comparison = () => (
             <tbody>
               {rows.map((r, ri) => (
                 <tr key={r.label} className={`border-b border-border last:border-b-0 ${ri % 2 === 1 ? "bg-surface/30" : ""}`}>
-                  <td className="p-6 text-sm font-semibold text-foreground">{r.label}</td>
+                  <td className="p-8 text-base font-semibold text-foreground">{r.label}</td>
                   {r.values.map((v, i) => (
                     <td
                       key={i}
-                      className={`p-6 ${i === r.values.length - 1 ? "bg-[hsl(var(--accent))]/8" : ""}`}
+                      className={`p-8 ${i === r.values.length - 1 ? "bg-[hsl(var(--accent))]/8" : ""}`}
                     >
                       {renderCell(v, i === r.values.length - 1, r.label === "Monthly cost")}
                     </td>
