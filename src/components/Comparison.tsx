@@ -1,15 +1,15 @@
 import { Check, X } from "lucide-react";
 
-const cols = ["Jobber", "ServiceTitan", "CompanyCam", "MEP Claw"];
+const cols = ["Jobber", "ServiceTitan", "Housecall Pro", "Dr. Plumbing"];
 
 const rows = [
-  { label: "Monthly cost", values: ["$49-$249/user", "$400+/tech", "$24-$59/user", "None, 6 months ROI"] },
+  { label: "Monthly cost", values: ["$49–$249/user", "$400+/tech", "$299/mo · 5 users", "Under $50/mo"] },
   { label: "Data ownership", values: ["Vendor's cloud", "Vendor's cloud", "Vendor's cloud", "Your hardware"] },
-  { label: "Voice AI receptionist", values: [false, "Add-on", false, true] },
-  { label: "AI quote engine", values: [false, "Limited", false, "4 modes · 30s"] },
-  { label: "Pricebook", values: ["Basic", "Premium tier", false, "Imported & searchable"] },
+  { label: "AI quote engine", values: [false, "Limited", false, "AI-powered, 4 styles"] },
+  { label: "SMS & customer comms", values: ["Basic", "Add-on", "Basic", "Automated A2P SMS"] },
+  { label: "Pricebook", values: ["Basic", "Premium tier", "Basic", "2,300+ tasks"] },
   { label: "Self-hosted / open source", values: [false, false, false, true] },
-  { label: "Trade flexibility", values: ["Generic", "HVAC/plumbing/elec", "Photo only", "All trades"] },
+  { label: "Trade flexibility", values: ["Generic", "HVAC/plumbing/elec", "General trades", "All trades"] },
   { label: "Setup", values: ["Same day", "Weeks of onboarding", "Same day", "Pre-configured + 3hr onboarding"] },
 ];
 
