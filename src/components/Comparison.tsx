@@ -16,30 +16,30 @@ const rows = [
 const renderCell = (v: string | boolean, isClaw: boolean, isCost = false) => {
   if (v === true)
     return (
-      <span className="inline-flex items-center justify-center w-7 h-7 rounded-full bg-emerald-500/15 ring-1 ring-emerald-500/30">
-        <Check className="w-4 h-4 text-emerald-600 dark:text-emerald-400" strokeWidth={2.75} />
+      <span className="inline-flex items-center justify-center w-8 h-8 rounded-full bg-emerald-500/15 ring-1 ring-emerald-500/30">
+        <Check className="w-5 h-5 text-emerald-600 dark:text-emerald-400" strokeWidth={2.75} />
       </span>
     );
   if (v === false)
     return (
-      <span className="inline-flex items-center justify-center w-7 h-7 rounded-full bg-rose-500/15 ring-1 ring-rose-500/30">
-        <X className="w-4 h-4 text-rose-600 dark:text-rose-400" strokeWidth={2.75} />
+      <span className="inline-flex items-center justify-center w-8 h-8 rounded-full bg-rose-500/15 ring-1 ring-rose-500/30">
+        <X className="w-5 h-5 text-rose-600 dark:text-rose-400" strokeWidth={2.75} />
       </span>
     );
   if (isClaw && isCost)
     return (
-      <span className="inline-flex items-center gap-1.5 rounded-full bg-emerald-500/15 text-emerald-700 dark:text-emerald-300 ring-1 ring-emerald-500/30 px-2.5 py-1 text-xs font-semibold">
-        <Check className="w-3.5 h-3.5" strokeWidth={3} />
+      <span className="inline-flex items-center gap-1.5 rounded-full bg-emerald-500/15 text-emerald-700 dark:text-emerald-300 ring-1 ring-emerald-500/30 px-3 py-1.5 text-sm font-semibold">
+        <Check className="w-4 h-4" strokeWidth={3} />
         {v}
       </span>
     );
   if (!isClaw && isCost)
     return (
-      <span className="inline-flex items-center rounded-full bg-rose-500/10 text-rose-700 dark:text-rose-300 ring-1 ring-rose-500/25 px-2.5 py-1 text-xs font-medium">
+      <span className="inline-flex items-center rounded-full bg-rose-500/10 text-rose-700 dark:text-rose-300 ring-1 ring-rose-500/25 px-3 py-1.5 text-sm font-medium">
         {v}
       </span>
     );
-  return <span className={`${isClaw ? "text-foreground font-medium" : "text-muted-foreground"} text-sm`}>{v}</span>;
+  return <span className={`${isClaw ? "text-foreground font-medium" : "text-muted-foreground"} text-base`}>{v}</span>;
 };
 
 
