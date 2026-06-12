@@ -1,14 +1,16 @@
 import {
   PhoneCall, MessageSquare, FileText, Users, Calendar, Receipt,
   BookOpen, Send, FolderLock, LayoutDashboard, ArrowRight,
+  Camera,
 } from "lucide-react";
 
 const features = [
-  { label: "Voice AI Receptionist", desc: "Answers calls 24/7, qualifies leads, books visits, creates CRM records automatically.", icon: PhoneCall, href: "/features/voice-ai" },
+  { label: "SMS & Voice AI",        desc: "24/7 texts and phone lines. AI answers calls, qualifies leads, and books visits automatically.", icon: PhoneCall, href: "/features/voice-ai" },
   { label: "Messaging & Inbox",     desc: "SMS + WhatsApp + missed-call replies in one shared team thread. Auto-replies handle the simple stuff.", icon: MessageSquare, href: "/solutions/discord" },
-  { label: "Quotes & Invoices",     desc: "Build a quote from a 2,300-task pricebook in 60 seconds. Customer pays with Apple Pay in two taps.", icon: FileText, href: "/features/quotes" },
-  { label: "CRM & Dispatch",        desc: "Every customer's full history in one place. Drag jobs onto techs on a live map and we'll text the ETA.", icon: Users, href: "/features/crm" },
-  { label: "Dashboard",             desc: "Revenue, route, system health, reviews - one screen on your phone, refreshed live.", icon: LayoutDashboard, href: "/features/dashboard" },
+  { label: "Quotes & Invoices",     desc: "Send, sign, get paid. Build a quote from a 2,300-task pricebook in 60 seconds.", icon: FileText, href: "/features/quotes" },
+  { label: "CRM & Dispatch",        desc: "Customers + scheduling. Every customer's full history in one place. Drag jobs onto techs on a live map.", icon: Users, href: "/features/crm" },
+  { label: "Dashboard",             desc: "The whole business at a glance. Revenue, route, system health, reviews - one screen on your phone.", icon: LayoutDashboard, href: "/features/dashboard" },
+  { label: "Field Photos & Maps",   desc: "Visual address-sorted history. Snap, upload, and find every jobsite photo by location.", icon: Camera, href: "/features/field-photos" },
   { label: "Pricebook",             desc: "2,300+ pre-loaded tasks with your markup. Consistent pricing across every truck and every tech.", icon: BookOpen, href: "/features/quotes" },
   { label: "Job & Visit Calendar",  desc: "Schedule from chat or voice, sync to your calendar, and tech updates flow back automatically.", icon: Calendar, href: "/features/crm" },
   { label: "Payments",              desc: "Apple Pay, Google Pay, ACH, card. No monthly gateway fee - just standard processing.", icon: Receipt, href: "/features/quotes" },

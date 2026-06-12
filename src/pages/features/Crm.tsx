@@ -9,7 +9,7 @@ import {
 const Crm = () => (
   <FeatureLanding
     eyebrow="CRM & DISPATCH"
-    title="One place for every customer, every job, every dollar."
+    title="Customers + scheduling."
     intro="The whole history of a customer in one screen - calls, texts, quotes, payments, photos, and the next visit on the calendar. No more 'wait, who is this?' when the phone rings."
     heroVisual={<CrmMock />}
     proof={{

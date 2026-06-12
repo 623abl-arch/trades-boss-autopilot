@@ -9,7 +9,7 @@ import {
 const Dashboard = () => (
   <FeatureLanding
     eyebrow="DASHBOARD"
-    title="The pulse of your business at 6 AM, on your phone, with coffee."
+    title="The whole business at a glance."
     intro="Revenue, open jobs, today's route, system health, and reviews - one screen, refreshed live. The first thing you check in the morning, the last thing you check before bed."
     heroVisual={<DashMock />}
     proof={{

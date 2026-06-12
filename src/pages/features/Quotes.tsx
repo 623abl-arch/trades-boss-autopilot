@@ -9,7 +9,7 @@ import {
 const Quotes = () => (
   <FeatureLanding
     eyebrow="QUOTES & INVOICES"
-    title="Send a quote in 60 seconds. Get paid before you leave the driveway."
+    title="Send, sign, get paid."
     intro="Build line-item quotes from a 2,300-task pricebook, send via text or email, and accept Apple Pay, ACH, or card. The customer signs and pays in two taps - you get pinged the second the money lands."
     heroVisual={<QuoteMock />}
     proof={{

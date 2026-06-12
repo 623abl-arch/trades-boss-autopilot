@@ -8,8 +8,8 @@ import {
 
 const VoiceAi = () => (
   <FeatureLanding
-    eyebrow="VOICE AI"
-    title="An AI receptionist that books jobs while you're on a roof."
+    eyebrow="SMS & VOICE AI"
+    title="24/7 texts and phone lines."
     intro="Every call answered in two rings, day or night. Your AI greets the caller, asks the right questions, gauges urgency, and drops a booked job onto your schedule - without you touching the phone."
     heroVisual={<VoiceCallMock />}
     proof={{
