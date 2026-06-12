@@ -187,6 +187,42 @@ export const DashMock = () => (
   </Stage>
 );
 
+/* ───────── FIELD PHOTOS & MAPS ───────── */
+export const PhotoMock = () => (
+  <Stage>
+    <Card className="top-0 left-0 w-[86%]">
+      <div className="flex items-center justify-between mb-3">
+        <div>
+          <div className="text-xs text-muted-foreground">Job #4823</div>
+          <div className="text-sm font-semibold text-foreground">512 Oak St</div>
+        </div>
+        <Camera className="w-4 h-4 text-muted-foreground" />
+      </div>
+      <div className="grid grid-cols-2 gap-2">
+        <div className="aspect-square rounded-lg bg-surface flex items-center justify-center">
+          <Image className="w-6 h-6 text-muted-foreground" />
+        </div>
+        <div className="aspect-square rounded-lg bg-surface flex items-center justify-center">
+          <Image className="w-6 h-6 text-muted-foreground" />
+        </div>
+        <div className="aspect-square rounded-lg bg-surface flex items-center justify-center">
+          <Image className="w-6 h-6 text-muted-foreground" />
+        </div>
+        <div className="aspect-square rounded-lg bg-surface flex items-center justify-center">
+          <Image className="w-6 h-6 text-muted-foreground" />
+        </div>
+      </div>
+    </Card>
+    <Card className="bottom-0 right-0 w-[55%]">
+      <div className="flex items-center gap-2 mb-1">
+        <MapPin className="w-4 h-4 text-accent" />
+        <div className="text-xs font-semibold text-foreground">3 photos · 2 min ago</div>
+      </div>
+      <div className="text-xs text-muted-foreground">Address-sorted gallery</div>
+    </Card>
+  </Stage>
+);
+
 /* Smaller mocks reused inside rows */
 export const NotifMock = () => (
   <div className="rounded-2xl bg-card border border-border shadow-floating p-4 max-w-xs mx-auto">
