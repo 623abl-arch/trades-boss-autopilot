@@ -16,7 +16,8 @@ const featureLinks = [
   { href: "/features/dashboard", icon: BarChart3, label: "Dashboard",          desc: "The whole business at a glance" },
   { href: "/features/quotes",    icon: FileText,  label: "Quotes & Invoices",  desc: "Send, sign, get paid" },
   { href: "/features/crm",       icon: Users,     label: "CRM & Dispatch",     desc: "Customers + scheduling" },
-  { href: "/features/voice-ai",  icon: Phone,     label: "Voice AI",           desc: "AI receptionist 24/7" },
+  { href: "/features/voice-ai",  icon: Phone,     label: "SMS & Voice AI",     desc: "24/7 texts and phone lines" },
+  { href: "/features/field-photos", icon: MapPin, label: "Field Photos & Maps",  desc: "Visual address-sorted history" },
 ];
 
 const categories = [

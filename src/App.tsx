@@ -14,7 +14,7 @@ import WhatIsMepClaw from "./pages/WhatIsMepClaw.tsx";
 import VoiceAi from "./pages/features/VoiceAi.tsx";
 import Quotes from "./pages/features/Quotes.tsx";
 import Crm from "./pages/features/Crm.tsx";
-import Dashboard from "./pages/features/Dashboard.tsx";
+import FieldPhotos from "./pages/features/FieldPhotos.tsx";
 import DiscordOverview from "./pages/solutions/DiscordOverview.tsx";
 import DiscordBot from "./pages/solutions/DiscordBot.tsx";
 import BlogPost from "./pages/BlogPost.tsx";
@@ -41,7 +41,7 @@ const App = () => (
             <Route path="/features/voice-ai" element={<VoiceAi />} />
             <Route path="/features/quotes" element={<Quotes />} />
             <Route path="/features/crm" element={<Crm />} />
-            <Route path="/features/dashboard" element={<Dashboard />} />
+            <Route path="/features/field-photos" element={<FieldPhotos />} />
             <Route path="/solutions/discord" element={<DiscordOverview />} />
             <Route path="/solutions/discord/bot" element={<DiscordBot />} />
             <Route path="/faq" element={<Faq />} />
