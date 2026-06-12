@@ -19,19 +19,6 @@
   </head>
 
   <body>
-    <script>
-      // Apply selected design version class before paint to avoid flash
-      (function () {
-        try {
-          var url = new URL(window.location.href);
-          var q = url.searchParams.get("v");
-          var v = q ? Number(q) : Number(localStorage.getItem("site-version"));
-          if (![1, 2, 3, 4].includes(v)) v = 1;
-          document.documentElement.classList.add("v" + v);
-          if (v === 4) document.documentElement.classList.add("dark");
-        } catch (e) {}
-      })();
-    </script>
     <div id="root"></div>
     <script type="module" src="/src/main.tsx"></script>
   </body>

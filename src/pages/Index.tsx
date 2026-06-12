@@ -1,4 +1,3 @@
-import { useEffect, useState } from "react";
 import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
 import ProvenStats from "@/components/ProvenStats";
@@ -15,10 +14,6 @@ import Testimonials from "@/components/Testimonials";
 import CtaFooter from "@/components/CtaFooter";
 import SiteFooter from "@/components/SiteFooter";
 import LiveStatusWidget from "@/components/LiveStatusWidget";
-import IndexV2 from "@/pages/IndexV2";
-import IndexV3 from "@/pages/IndexV3";
-import IndexV4 from "@/pages/IndexV4";
-import { getInitialVersion, type Version } from "@/components/VersionSwitcher";
 
 const V1 = () => (
   <>
@@ -40,13 +35,6 @@ const V1 = () => (
   </>
 );
 
-const Index = () => {
-  const [version, setVersion] = useState<Version>(1);
-  useEffect(() => setVersion(getInitialVersion()), []);
-  if (version === 2) return <IndexV2 />;
-  if (version === 3) return <IndexV3 />;
-  if (version === 4) return <IndexV4 />;
-  return <V1 />;
-};
+const Index = () => <V1 />;
 
 export default Index;
