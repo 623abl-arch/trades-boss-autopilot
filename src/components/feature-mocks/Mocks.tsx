@@ -11,6 +11,8 @@ import {
   Bell,
   DollarSign,
   MapPin,
+  Camera,
+  Image,
 } from "lucide-react";
 
 /* Shared base - floating card stack on cream */
