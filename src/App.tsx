@@ -11,6 +11,7 @@ import AboutMepClaw from "./pages/AboutMepClaw.tsx";
 import NotFound from "./pages/NotFound.tsx";
 import Faq from "./pages/Faq.tsx";
 import WhatIsMepClaw from "./pages/WhatIsMepClaw.tsx";
+import PricingPage from "./pages/PricingPage.tsx";
 import VoiceAi from "./pages/features/VoiceAi.tsx";
 import Quotes from "./pages/features/Quotes.tsx";
 import Crm from "./pages/features/Crm.tsx";
@@ -35,6 +36,7 @@ const App = () => (
           <ScrollToTop />
           <Routes>
             <Route path="/" element={<Index />} />
+            <Route path="/pricing" element={<PricingPage />} />
             <Route path="/stack" element={<Stack />} />
             <Route path="/how-it-works" element={<HowItWorksPage />} />
             <Route path="/about" element={<AboutMepClaw />} />
