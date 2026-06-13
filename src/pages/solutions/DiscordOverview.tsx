@@ -2,6 +2,7 @@ import Navbar from "@/components/Navbar";
 import SiteFooter from "@/components/SiteFooter";
 import { Button } from "@/components/ui/button";
 import { Hash, Volume2 } from "lucide-react";
+import discordMascot from "@/assets/discord-mascot.png.asset.json";
 
 const DiscordOverview = () => (
   <>
@@ -42,13 +43,22 @@ const DiscordOverview = () => (
 
     {/* WHAT IS DISCORD */}
     <section className="bg-background pt-24 pb-10">
-      <div className="container max-w-4xl mx-auto px-6 text-center">
-        <h2 className="text-3xl md:text-5xl font-bold text-foreground tracking-tight mb-6">
-          What is Discord?
-        </h2>
-        <p className="text-lg text-muted-foreground leading-relaxed max-w-3xl mx-auto">
-          Discord is a free group chat app that runs right on your phone, tablet, or office computer. Instead of blowing up your phone with disorganized group texts or losing track of paper notes, Discord acts as your internal command center where every job, text, and photo has its own organized room.
-        </p>
+      <div className="container max-w-5xl mx-auto px-6">
+        <div className="flex flex-col md:flex-row items-center md:items-start gap-8 md:gap-10">
+          <img
+            src={discordMascot.url}
+            alt="Discord mascot"
+            className="w-24 h-24 md:w-32 md:h-32 shrink-0 object-contain"
+          />
+          <div className="text-center md:text-left">
+            <h2 className="text-3xl md:text-5xl font-bold text-foreground tracking-tight mb-6">
+              What is Discord?
+            </h2>
+            <p className="text-lg text-muted-foreground leading-relaxed">
+              Discord is a free group chat app that runs right on your phone, tablet, or office computer. Instead of blowing up your phone with disorganized group texts or losing track of paper notes, Discord acts as your internal command center where every job, text, and photo has its own organized room.
+            </p>
+          </div>
+        </div>
       </div>
     </section>
 
