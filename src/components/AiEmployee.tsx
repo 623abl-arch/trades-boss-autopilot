@@ -14,7 +14,7 @@ const cards: Card[] = [
     title: "Stop Renting Software",
     body:
       "Replace expensive recurring contracts with a single, one-time investment that drops your baseline platform costs below $50 a month and lets you scale your technician roster infinitely without financial penalty.",
-    href: "/pricing",
+    href: "/what-is-mepclaw",
     accent: "from-sky-200/60 via-emerald-100/40 to-amber-200/60",
   },
   {
@@ -22,7 +22,7 @@ const cards: Card[] = [
     title: "Frictionless Field Workflows",
     body:
       "Your field crew completely avoids clunky app fatigue by managing their daily assignments, logging timesheets, and processing receipt expenses through an incredibly simple, automated chat setup.",
-    href: "/features/crm",
+    href: "/what-is-mepclaw",
     accent: "from-emerald-200/60 via-amber-100/40 to-orange-200/60",
   },
   {
@@ -30,7 +30,7 @@ const cards: Card[] = [
     title: "Absolute Data Sovereignty",
     body:
       "Your customer records, field photos, and private financial logs live securely on a physical server inside your building so no external tech corporation can ever lock you out or rent your data back to you.",
-    href: "/stack",
+    href: "/what-is-mepclaw",
     accent: "from-amber-200/60 via-orange-200/40 to-rose-200/60",
   },
 ];
@@ -64,7 +64,7 @@ const AiEmployee = () => (
             >
               {/* Illustration area with gradient wash */}
               <div
-                className={`relative h-56 bg-gradient-to-br ${c.accent} flex items-center justify-center overflow-hidden`}
+                className={`relative h-64 bg-gradient-to-br ${c.accent} flex items-center justify-center overflow-hidden`}
               >
                 <div className="absolute inset-0 opacity-30 [background-image:radial-gradient(circle_at_1px_1px,_hsl(var(--foreground))_1px,_transparent_0)] [background-size:8px_8px]" />
                 <div className="relative w-28 h-28 rounded-full bg-card/90 backdrop-blur flex items-center justify-center shadow-soft">
@@ -111,15 +111,13 @@ const AiEmployee = () => (
           {/* Card 1 - large quote */}
           <div className="rounded-2xl bg-callout border border-border p-10 md:p-14 flex flex-col justify-between min-h-[280px]">
             <p className="font-serif text-2xl md:text-[28px] leading-[1.35] text-[hsl(var(--accent))]">
-              &ldquo;[MEP Claw] is <em className="italic">excellent.</em>
-              <br />
-              We were going to hire another office admin, but now we don&apos;t
-              have to.&rdquo;
+              &ldquo;MEP Claw is <em className="italic">excellent.</em>{" "}
+              Got rid of our $1,200/mo software bill and the amount of money we save is mental.&rdquo;
             </p>
             <div className="text-center mt-8">
-              <div className="text-sm text-muted-foreground">Mike Reyes</div>
+              <div className="text-sm text-muted-foreground">Jason M.</div>
               <div className="text-sm font-semibold text-foreground">
-                Signature Plumbing
+                Vanguard Plumbing
               </div>
             </div>
           </div>
@@ -127,17 +125,14 @@ const AiEmployee = () => (
           {/* Card 2 - smaller quote */}
           <div className="rounded-2xl bg-callout border border-border p-10 md:p-14 flex flex-col justify-between min-h-[280px]">
             <p className="font-serif text-xl md:text-2xl leading-[1.4] text-[hsl(var(--accent))]">
-              &ldquo;<em className="italic font-semibold">
-                MEP Claw has 2x&apos;d our after-hours bookings
-              </em>{" "}
-              and our quote close rate is up double digits.&rdquo;
+              &ldquo;Been using MEP Claw for over 6 months now it helped me save lots of time.&rdquo;
             </p>
             <div className="mt-8">
               <div className="text-sm text-muted-foreground">
-                Carlos D., General Manager
+                Brian D., Operations
               </div>
               <div className="text-sm font-semibold text-foreground">
-                DG Mechanical
+                Tri-County HVAC
               </div>
             </div>
           </div>
@@ -145,34 +140,24 @@ const AiEmployee = () => (
           {/* Card 3 - big stat */}
           <div className="rounded-2xl bg-callout border border-border p-10 md:p-14 flex flex-col items-center justify-center text-center min-h-[280px]">
             <div className="font-serif text-7xl md:text-8xl text-[hsl(var(--accent))] font-bold leading-none mb-6">
-              68%
+              $0
             </div>
             <p className="text-sm text-muted-foreground max-w-xs">
-              Average reduction in dispatch &amp; admin overhead for
-              MEP&nbsp;Claw shops in their first 90 days.
+              Per-User Fees. Add as many trucks and technicians to your fleet as you want without your bill jumping.
             </p>
-            <div className="mt-6 text-xs font-semibold tracking-wider uppercase text-foreground">
-              MEP contractors on Claw
-            </div>
           </div>
 
           {/* Card 4 - quote */}
           <div className="rounded-2xl bg-callout border border-border p-10 md:p-14 flex flex-col justify-between min-h-[280px]">
             <p className="font-serif text-xl md:text-2xl leading-[1.4] text-[hsl(var(--accent))]">
-              &ldquo;The Claw AI Employee can start and end the conversation
-              and{" "}
-              <em className="italic font-semibold">
-                actually book the appointment
-              </em>{" "}
-              straight into our CRM. It&apos;s doing almost all of the
-              work.&rdquo;
+              &ldquo;My field guys just tap a simple text menu to run jobs and log timesheets. No bloated apps, no lost material receipts, zero headache.&rdquo;
             </p>
             <div className="mt-8">
               <div className="text-sm text-muted-foreground">
-                Reed Borton, Owner / President
+                Marcus T.
               </div>
               <div className="text-sm font-semibold text-foreground">
-                Premier Heating &amp; Air
+                Crossroads Electric
               </div>
             </div>
           </div>
