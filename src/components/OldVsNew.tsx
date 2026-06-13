@@ -37,7 +37,7 @@ const rows = [
 const OldVsNew = () => (
   <section className="bg-background">
     <div className="container max-w-[1680px] mx-auto px-6 py-24 md:py-28">
-      <div className="max-w-3xl mb-14">
+      <div className="max-w-3xl mb-14 mx-auto text-center">
         <p className="eyebrow mb-5"><span>Old way vs. MEP Claw</span></p>
         <h2 className="text-4xl md:text-5xl font-bold text-foreground tracking-tightest leading-[1.05]">
           The same job, done with a fraction of the friction.
