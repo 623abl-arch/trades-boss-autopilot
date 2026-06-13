@@ -111,7 +111,7 @@ const Pricing = () => (
                 ))}
               </ul>
               <a
-                href="#book"
+                href="/pricing"
                 className={`text-center text-sm font-semibold rounded-full py-3 transition-colors ${
                   t.recommended
                     ? "bg-[hsl(var(--accent))] text-white hover:opacity-90"
