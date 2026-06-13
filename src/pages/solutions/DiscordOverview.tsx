@@ -2,6 +2,7 @@ import Navbar from "@/components/Navbar";
 import SiteFooter from "@/components/SiteFooter";
 import { Button } from "@/components/ui/button";
 import { Hash, Volume2 } from "lucide-react";
+import discordMascot from "@/assets/discord-mascot.png.asset.json";
 
 const DiscordOverview = () => (
   <>
