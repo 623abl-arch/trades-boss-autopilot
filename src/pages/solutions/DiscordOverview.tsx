@@ -40,6 +40,18 @@ const DiscordOverview = () => (
       </div>
     </section>
 
+    {/* WHAT IS DISCORD */}
+    <section className="bg-background pt-24 pb-10">
+      <div className="container max-w-4xl mx-auto px-6 text-center">
+        <h2 className="text-3xl md:text-5xl font-bold text-foreground tracking-tight mb-6">
+          What is Discord?
+        </h2>
+        <p className="text-lg text-muted-foreground leading-relaxed max-w-3xl mx-auto">
+          Discord is a free group chat app that runs right on your phone, tablet, or office computer. Instead of blowing up your phone with disorganized group texts or losing track of paper notes, Discord acts as your internal command center where every job, text, and photo has its own organized room.
+        </p>
+      </div>
+    </section>
+
     {/* SECTION TITLE */}
     <section className="bg-background pt-24 pb-10">
       <div className="container max-w-4xl mx-auto px-6 text-center">
