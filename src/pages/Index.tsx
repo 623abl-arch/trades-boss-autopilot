@@ -8,7 +8,6 @@ import IntegrationsStrip from "@/components/IntegrationsStrip";
 import RecommendedReading from "@/components/RecommendedReading";
 import Pricing from "@/components/Pricing";
 import Comparison from "@/components/Comparison";
-import WhoItsFor from "@/components/WhoItsFor";
 import OldVsNew from "@/components/OldVsNew";
 import Testimonials from "@/components/Testimonials";
 import CtaFooter from "@/components/CtaFooter";
@@ -25,7 +24,6 @@ const V1 = () => (
     <Testimonials />
     <OldVsNew />
     <Comparison />
-    <WhoItsFor />
     <Pricing />
     <RecommendedReading />
     <IntegrationsStrip />
