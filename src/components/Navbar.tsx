@@ -1,6 +1,7 @@
 import logo from "@/assets/mep-claw-logo.png";
 import { Button } from "@/components/ui/button";
-import { Phone, FileText, Users, BarChart3, ChevronDown, MessagesSquare, Bot, Layers, MapPin } from "lucide-react";
+import { Phone, FileText, Users, BarChart3, ChevronDown, MessagesSquare, Bot, Layers, MapPin, Moon, Sun } from "lucide-react";
+import { useTheme } from "@/components/ThemeProvider";
 
 const mepclawLinks = [
   { href: "/what-is-mepclaw", icon: MessagesSquare, label: "Overview", desc: "What is MEP Claw?" },
@@ -27,6 +28,7 @@ const categories = [
 ] as const;
 
 const Navbar = () => {
+  const { theme, toggle } = useTheme();
   return (
     <header className="sticky top-0 z-50 bg-background/85 backdrop-blur-xl border-b border-border/70">
       <div className="container max-w-[1680px] mx-auto px-6 flex items-center justify-between h-16">
@@ -87,6 +89,13 @@ const Navbar = () => {
         </nav>
 
         <div className="flex items-center gap-2">
+          <button
+            onClick={toggle}
+            aria-label="Toggle dark mode"
+            className="inline-flex items-center justify-center w-9 h-9 rounded-md text-muted-foreground hover:text-foreground hover:bg-muted transition-colors"
+          >
+            {theme === "dark" ? <Sun className="w-4 h-4" /> : <Moon className="w-4 h-4" />}
+          </button>
           <a href="#book" className="hidden md:inline-flex text-sm font-medium text-muted-foreground hover:text-foreground px-3 py-2">
             Sign in
           </a>
