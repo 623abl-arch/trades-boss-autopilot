@@ -10,8 +10,8 @@ const CtaFooter = () => (
         <br className="hidden md:block" />
         <em className="not-italic font-serif italic text-[hsl(var(--accent))]">Stop renting it.</em>
       </h2>
-      <p className="font-serif text-xl md:text-2xl text-muted-foreground italic mb-12 max-w-2xl mx-auto leading-snug">
-        One discovery call. We learn your trade, team size, and current stack. If MEP Claw fits, your box ships in two weeks — pre-configured, plug and play.
+      <p className="font-serif text-xl md:text-2xl text-muted-foreground italic mb-12 max-w-2xl mx-auto leading-snug sr-only">
+        Removed
       </p>
       <div className="flex flex-wrap items-center justify-center gap-4">
         <Button variant="cta" size="lg" asChild>
