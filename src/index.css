@@ -96,6 +96,41 @@
     --callout: 222 40% 13%;
   }
 
+  /* Site-wide dark mode override - Discord-ish slight grey with warm orange accent */
+  .dark {
+    --background: 220 7% 20%;           /* ~#2F3136 */
+    --foreground: 30 15% 95%;
+
+    --surface: 220 7% 23%;
+    --card: 220 6% 26%;
+    --card-foreground: 30 15% 95%;
+
+    --popover: 220 6% 26%;
+    --popover-foreground: 30 15% 95%;
+
+    --primary: 14 88% 58%;              /* orange CTA */
+    --primary-foreground: 0 0% 100%;
+    --primary-glow: 18 90% 65%;
+
+    --accent: 14 90% 60%;
+    --accent-foreground: 0 0% 100%;
+
+    --secondary: 220 6% 30%;
+    --secondary-foreground: 30 15% 95%;
+
+    --muted: 220 6% 28%;
+    --muted-foreground: 30 8% 72%;
+
+    --destructive: 0 72% 60%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 220 6% 34%;
+    --input: 220 6% 34%;
+    --ring: 14 88% 58%;
+
+    --callout: 220 7% 24%;
+  }
+
   * { @apply border-border; }
 
   html { scroll-behavior: smooth; font-size: 16.5px; }
