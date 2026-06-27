@@ -28,6 +28,7 @@ const categories = [
 ] as const;
 
 const Navbar = () => {
+  const { theme, toggle } = useTheme();
   return (
     <header className="sticky top-0 z-50 bg-background/85 backdrop-blur-xl border-b border-border/70">
       <div className="container max-w-[1680px] mx-auto px-6 flex items-center justify-between h-16">
