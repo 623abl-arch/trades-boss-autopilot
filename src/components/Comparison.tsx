@@ -97,7 +97,7 @@ const Comparison = () => {
               </tr>
             </thead>
             <tbody>
-              {rows.map((r, ri) => (
+              {visibleRows.map((r, ri) => (
                 <tr key={r.label} className={`border-b border-border last:border-b-0 ${ri % 2 === 1 ? "bg-surface/30" : ""}`}>
                   <td className="p-8 text-base font-semibold text-foreground">{r.label}</td>
                   {r.values.map((v, i) => (
@@ -114,8 +114,14 @@ const Comparison = () => {
           </table>
         </div>
       </div>
+      <div className="mt-8 flex justify-center">
+        <Button variant="outline" size="lg" onClick={() => setExpanded((v) => !v)}>
+          {expanded ? "Show less" : "Show more"}
+        </Button>
+      </div>
     </div>
   </section>
-);
+  );
+};
 
 export default Comparison;
