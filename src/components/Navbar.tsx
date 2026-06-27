@@ -89,6 +89,13 @@ const Navbar = () => {
         </nav>
 
         <div className="flex items-center gap-2">
+          <button
+            onClick={toggle}
+            aria-label="Toggle dark mode"
+            className="inline-flex items-center justify-center w-9 h-9 rounded-md text-muted-foreground hover:text-foreground hover:bg-muted transition-colors"
+          >
+            {theme === "dark" ? <Sun className="w-4 h-4" /> : <Moon className="w-4 h-4" />}
+          </button>
           <a href="#book" className="hidden md:inline-flex text-sm font-medium text-muted-foreground hover:text-foreground px-3 py-2">
             Sign in
           </a>
