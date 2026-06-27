@@ -93,7 +93,7 @@ const WhatIs = () => {
           </h2>
           <p className="text-lg md:text-xl text-muted-foreground leading-relaxed">
             One Mini PC on your desk runs every workflow that used to cost you
-            thousands a month - and the data never leaves your shop.
+            thousands a month - and the data never leaves your shop
           </p>
         </div>
 
