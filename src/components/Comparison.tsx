@@ -1,4 +1,6 @@
 import { Check, X } from "lucide-react";
+import { useState } from "react";
+import { Button } from "@/components/ui/button";
 
 const cols = ["Jobber", "ServiceTitan", "Housecall Pro", "MEP Claw"];
 
@@ -28,14 +30,14 @@ const renderCell = (v: string | boolean, isClaw: boolean, isCost = false) => {
     );
   if (isClaw && isCost)
     return (
-      <span className="inline-flex items-center gap-1.5 rounded-full bg-emerald-500/15 text-emerald-700 dark:text-emerald-300 ring-1 ring-emerald-500/30 px-3 py-1.5 text-sm font-semibold">
-        <Check className="w-4 h-4" strokeWidth={3} />
+      <span className="inline-flex items-center gap-1.5 rounded-full bg-emerald-500/15 text-emerald-700 dark:text-emerald-300 ring-1 ring-emerald-500/30 px-4 py-2 text-lg md:text-xl font-bold">
+        <Check className="w-5 h-5" strokeWidth={3} />
         {v}
       </span>
     );
   if (!isClaw && isCost)
     return (
-      <span className="inline-flex items-center rounded-full bg-rose-500/10 text-rose-700 dark:text-rose-300 ring-1 ring-rose-500/25 px-3 py-1.5 text-sm font-medium">
+      <span className="inline-flex items-center rounded-full bg-rose-500/10 text-rose-700 dark:text-rose-300 ring-1 ring-rose-500/25 px-4 py-2 text-lg md:text-xl font-semibold">
         {v}
       </span>
     );
@@ -43,7 +45,10 @@ const renderCell = (v: string | boolean, isClaw: boolean, isCost = false) => {
 };
 
 
-const Comparison = () => (
+const Comparison = () => {
+  const [expanded, setExpanded] = useState(false);
+  const visibleRows = expanded ? rows : rows.slice(0, 1);
+  return (
   <section className="relative bg-surface overflow-hidden">
     {/* colorful splashes */}
     <div className="pointer-events-none absolute inset-0">
