@@ -129,6 +129,10 @@
     --ring: 14 88% 58%;
 
     --callout: 220 7% 24%;
+
+    /* Dark hero wash - subtle Discord grey with warm orange glow */
+    --gradient-soft: linear-gradient(180deg, hsl(220 7% 22%), hsl(220 7% 20%));
+    --gradient-hero: radial-gradient(ellipse 90% 60% at 30% 20%, hsl(14 88% 58% / 0.10), transparent 60%), linear-gradient(180deg, hsl(220 7% 22%) 0%, hsl(220 7% 20%) 70%, hsl(220 7% 20%) 100%);
   }
 
   * { @apply border-border; }
