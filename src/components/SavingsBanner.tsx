@@ -7,8 +7,8 @@ const SavingsBanner = () => (
         </span>
         <p className="text-foreground text-sm leading-relaxed">
           A typical Jobber + ServiceTitan + CompanyCam + Twilio stack runs{" "}
-          <span className="font-semibold text-primary">$300-800/month</span>, every month, forever - and your data lives on their servers. MEP Claw runs the same workflows for{" "}
-          <span className="text-3xl md:text-4xl font-extrabold text-primary">~$20/month</span>{" "}
+          <span className="font-semibold text-primary">$350-900/month</span> (Jobber $50-200, ServiceTitan $250-500, Housecall Pro $50-200) - every month, forever, and your data lives on their servers. MEP Claw runs the same workflows for under{" "}
+          <span className="text-3xl md:text-4xl font-extrabold text-primary">$50/month</span>{" "}
           on hardware you own.
         </p>
       </div>
