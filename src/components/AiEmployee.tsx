@@ -142,7 +142,7 @@ const AiEmployee = () => (
             <div className="font-serif text-8xl md:text-9xl text-[hsl(var(--accent))] font-bold leading-none mb-6">
               $0
             </div>
-            <p className="text-base md:text-lg text-muted-foreground max-w-sm leading-relaxed">
+            <p className="text-lg md:text-xl text-muted-foreground max-w-sm leading-relaxed">
               Per-User Fees. Add as many trucks and technicians to your fleet as you want without your bill jumping.
             </p>
           </div>
