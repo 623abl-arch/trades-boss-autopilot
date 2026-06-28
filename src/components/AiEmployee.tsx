@@ -139,7 +139,7 @@ const AiEmployee = () => (
 
           {/* Card 3 - big stat */}
           <div className="rounded-2xl bg-callout border border-border p-10 md:p-14 flex flex-col items-center justify-center text-center min-h-[400px]">
-            <div className="font-serif text-7xl md:text-8xl text-[hsl(var(--accent))] font-bold leading-none mb-6">
+            <div className="font-serif text-8xl md:text-9xl text-[hsl(var(--accent))] font-bold leading-none mb-6">
               $0
             </div>
             <p className="text-base md:text-lg text-muted-foreground max-w-sm leading-relaxed">
