@@ -159,6 +159,7 @@ const WhatIsMepClaw = () => (
     {/* CTA */}
     <QuantifiedOutcomes />
     <WhoItsFor />
+    <OldVsNew />
     <section className="bg-surface slant-top py-24">
       <div className="container max-w-3xl mx-auto px-6 text-center">
         <h2 className="text-3xl md:text-5xl font-bold text-foreground tracking-tightest mb-5">
