@@ -158,6 +158,60 @@ const Stack = () => (
       </div>
     </section>
 
+    {/* REPLACED SAAS TRUTH TABLE */}
+    <section className="bg-background py-20 md:py-24 border-t border-border">
+      <div className="container max-w-[1680px] mx-auto px-6">
+        <div className="max-w-3xl mb-12">
+          <p className="eyebrow mb-4"><span>What it replaces</span></p>
+          <h2 className="text-3xl md:text-5xl font-bold text-foreground tracking-tightest leading-[1.1] mb-5">
+            One box. A dozen subscriptions, gone.
+          </h2>
+          <p className="text-lg text-muted-foreground">
+            Every row below is a paid SaaS tool a typical contractor is renting today. MEP Claw rolls them all onto your Mini PC.
+          </p>
+        </div>
+
+        <div className="rounded-2xl border border-border overflow-hidden bg-card">
+          <div className="grid grid-cols-12 px-6 py-4 bg-surface border-b border-border text-xs font-bold uppercase tracking-[0.15em] text-muted-foreground">
+            <div className="col-span-4 md:col-span-3">Category</div>
+            <div className="col-span-4 md:col-span-4">What you're paying for today</div>
+            <div className="col-span-4 md:col-span-3">MEP Claw runs</div>
+            <div className="hidden md:block md:col-span-2 text-right">SaaS cost</div>
+          </div>
+          {[
+            ["Voice AI", "Answering service / IVR", "Retell AI", "$200-500/mo"],
+            ["SMS", "Twilio / EZ Texting", "Twilio (your account)", "$50-150/mo"],
+            ["CRM", "Jobber / ServiceTitan / Housecall Pro", "Twenty CRM", "$50-500/mo"],
+            ["Invoicing & Payments", "QuickBooks / FreshBooks", "Invoice Ninja + Stripe", "$30-80/mo"],
+            ["File Storage", "Dropbox / Google Drive", "Nextcloud", "$10-25/mo/user"],
+            ["Jobsite Photos", "CompanyCam", "Immich", "$15-45/mo/user"],
+            ["Team Chat", "Slack", "Discord", "$7-15/mo/user"],
+            ["Pricebook", "Profit Rhino / FieldEdge add-on", "Built-in (2,300+ tasks)", "$50-150/mo"],
+            ["Dispatch & Calendar", "ServiceTitan Dispatch", "Field-Ops + Discord", "Bundled $200+/mo"],
+            ["Receipt Capture", "Expensify / Dext", "Gemini AI extract", "$5-20/mo/user"],
+            ["AI Assistant", "—", "Jarvis (local + OpenRouter)", "—"],
+            ["File Sync / Remote Access", "VPN service", "Tailscale", "$0-20/mo"],
+          ].map(([cat, saas, ours, cost], i) => (
+            <div
+              key={cat}
+              className={`grid grid-cols-12 px-6 py-5 items-center text-sm md:text-base ${
+                i % 2 === 1 ? "bg-surface/40" : ""
+              } border-b border-border last:border-b-0`}
+            >
+              <div className="col-span-4 md:col-span-3 font-semibold text-foreground">{cat}</div>
+              <div className="col-span-4 md:col-span-4 text-muted-foreground line-through decoration-rose-500/60">{saas}</div>
+              <div className="col-span-4 md:col-span-3 font-semibold text-[hsl(var(--accent))]">{ours}</div>
+              <div className="hidden md:block md:col-span-2 text-right text-muted-foreground font-mono text-sm">{cost}</div>
+            </div>
+          ))}
+        </div>
+
+        <p className="text-sm text-muted-foreground mt-6">
+          Add it up and the average contractor is renting $600-1,500/mo of SaaS to do what this one box does for under $50/mo in ongoing costs.
+        </p>
+      </div>
+    </section>
+
     {/* HOW IT ALL CONNECTS */}
     <StackFlow />
 

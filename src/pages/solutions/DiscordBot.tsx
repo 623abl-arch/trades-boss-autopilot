@@ -36,18 +36,50 @@ const DiscordBot = () => (
 
     {/* SECOND SECTION */}
     <section className="bg-background py-24">
-      <div className="container max-w-[1680px] mx-auto px-6 grid lg:grid-cols-12 gap-12 items-center">
-        <div className="lg:col-span-7">
+      <div className="container max-w-[1680px] mx-auto px-6 grid lg:grid-cols-12 gap-12 items-start">
+        <div className="lg:col-span-6">
           <h2 className="text-3xl md:text-5xl font-bold text-foreground tracking-tight mb-6">
             A command for everything.
           </h2>
-          <p className="text-lg text-muted-foreground leading-relaxed max-w-xl">
-            Your team already knows how to text. Our bot handles the back-end data entry.
+          <p className="text-lg text-muted-foreground leading-relaxed max-w-xl mb-6">
+            Your team already knows how to text. Our bot - 8,000+ lines of custom Node.js running on your box - handles the back-end data entry.
+          </p>
+          <p className="text-base text-muted-foreground leading-relaxed max-w-xl">
+            Each tech gets their own private <code className="px-1.5 py-0.5 rounded bg-surface text-foreground text-sm">#name-ops</code> channel with a numbered menu. One tap. No app to learn.
           </p>
         </div>
-        <div className="lg:col-span-5 flex justify-center">
-          <div className="w-56 h-56 md:w-72 md:h-72 rounded-3xl bg-surface border border-border flex items-center justify-center">
-            <span className="text-6xl">🤖</span>
+
+        <div className="lg:col-span-6">
+          <div className="rounded-2xl border border-border bg-surface shadow-elevated overflow-hidden">
+            <div className="px-5 py-3 border-b border-border bg-card flex items-center gap-2">
+              <span className="w-2.5 h-2.5 rounded-full bg-rose-400/80" />
+              <span className="w-2.5 h-2.5 rounded-full bg-amber-400/80" />
+              <span className="w-2.5 h-2.5 rounded-full bg-emerald-400/80" />
+              <span className="ml-3 text-xs font-mono text-muted-foreground">#daniel-ops</span>
+            </div>
+            <div className="p-6 font-mono text-sm text-foreground/90 space-y-1.5">
+              {[
+                ["1", "jobs", "see today's assigned visits"],
+                ["2", "arrive", "clock in on a visit"],
+                ["3", "leave", "clock out"],
+                ["4", "menu", "show this menu"],
+                ["5", "notes", "add notes to a visit"],
+                ["6", "help", "topic-dispatched help"],
+                ["7", "crew", "see who's on a job"],
+                ["8", "assign", "manager: add tech to job"],
+                ["9", "unassign", "manager: remove tech"],
+                ["10", "reassign", "manager: swap LEAD/HELPER"],
+              ].map(([n, cmd, desc]) => (
+                <div key={n} className="flex gap-3">
+                  <span className="text-[hsl(var(--accent))] w-6 text-right">{n}</span>
+                  <span className="text-foreground font-semibold w-20">{cmd}</span>
+                  <span className="text-muted-foreground">— {desc}</span>
+                </div>
+              ))}
+              <div className="pt-3 mt-3 border-t border-border text-xs text-muted-foreground">
+                Plus contextual: <span className="text-foreground">sms JOB-XXXX</span>, <span className="text-foreground">eta JOB-XXXX</span>, <span className="text-foreground">hu &lt;note&gt;</span>
+              </div>
+            </div>
           </div>
         </div>
       </div>

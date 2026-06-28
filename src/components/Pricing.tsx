@@ -125,7 +125,7 @@ const Pricing = () => (
         ))}
       </div>
       <p className="font-serif italic text-base text-muted-foreground mt-10 text-center">
-        Managed SaaS option available from $199/mo for solo operators.
+        Ongoing software cost: under $50/mo (VPS + Twilio + optional AI usage). No per-user fees, ever.
       </p>
     </div>
   </section>
