@@ -64,7 +64,7 @@ const AiEmployee = () => (
             >
               {/* Illustration area with gradient wash */}
               <div
-                className={`relative h-64 bg-gradient-to-br ${c.accent} flex items-center justify-center overflow-hidden`}
+                className={`relative h-96 bg-gradient-to-br ${c.accent} flex items-center justify-center overflow-hidden`}
               >
                 <div className="absolute inset-0 opacity-30 [background-image:radial-gradient(circle_at_1px_1px,_hsl(var(--foreground))_1px,_transparent_0)] [background-size:8px_8px]" />
                 <div className="relative w-28 h-28 rounded-full bg-card/90 backdrop-blur flex items-center justify-center shadow-soft">
