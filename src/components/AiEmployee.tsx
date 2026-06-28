@@ -79,7 +79,7 @@ const AiEmployee = () => (
                 <h3 className="text-2xl font-bold text-foreground tracking-tight mb-4">
                   {c.title}
                 </h3>
-                <p className="text-[15px] text-muted-foreground leading-relaxed mb-6 flex-1">
+                <p className="text-lg text-muted-foreground leading-relaxed mb-6 flex-1">
                   {c.body}
                 </p>
                 <a
