@@ -6,7 +6,7 @@ import {
 
 const features = [
   { label: "SMS & Voice AI",        desc: "24/7 texts and phone lines. AI answers calls, qualifies leads, and books visits automatically.", icon: PhoneCall, href: "/features/voice-ai" },
-  { label: "Messaging & Inbox",     desc: "SMS + WhatsApp + missed-call replies in one shared team thread. Auto-replies handle the simple stuff.", icon: MessageSquare, href: "/solutions/discord" },
+  { label: "Messaging & Inbox",     desc: "SMS, email, and missed-call replies in one shared team thread. Auto-replies handle the simple stuff.", icon: MessageSquare, href: "/solutions/discord" },
   { label: "Quotes & Invoices",     desc: "Send, sign, get paid. Build a quote from a 2,300-task pricebook in 60 seconds.", icon: FileText, href: "/features/quotes" },
   { label: "CRM & Dispatch",        desc: "Customers + scheduling. Every customer's full history in one place. Drag jobs onto techs on a live map.", icon: Users, href: "/features/crm" },
   { label: "Dashboard",             desc: "The whole business at a glance. Revenue, route, system health, reviews - one screen on your phone.", icon: LayoutDashboard, href: "/features/dashboard" },
