@@ -4,6 +4,7 @@ import SiteFooter from "@/components/SiteFooter";
 import { Button } from "@/components/ui/button";
 import QuantifiedOutcomes from "@/components/QuantifiedOutcomes";
 import WhoItsFor from "@/components/WhoItsFor";
+import OldVsNew from "@/components/OldVsNew";
 
 const stackLogos = [
   { name: "Twenty CRM", color: "#7C3AED" },
