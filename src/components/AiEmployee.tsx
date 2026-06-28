@@ -13,7 +13,7 @@ const cards: Card[] = [
     icon: Clock,
     title: "Stop Renting Software",
     body:
-      "Replace expensive recurring contracts with a single, one-time investment that drops your baseline platform costs below $50 a month and lets you scale your technician roster infinitely without financial penalty.",
+      "Pay once instead of every month. This keeps your costs under $50 a month and lets you add as many workers as you want for free.",
     href: "/what-is-mepclaw",
     accent: "from-sky-200/60 via-emerald-100/40 to-amber-200/60",
   },
@@ -21,7 +21,7 @@ const cards: Card[] = [
     icon: Trophy,
     title: "Frictionless Field Workflows",
     body:
-      "Your field crew completely avoids clunky app fatigue by managing their daily assignments, logging timesheets, and processing receipt expenses through an incredibly simple, automated chat setup.",
+      "Your workers out in the field do everything through a simple text chat. They can see tasks, log hours, and submit receipts without using a confusing app.",
     href: "/what-is-mepclaw",
     accent: "from-emerald-200/60 via-amber-100/40 to-orange-200/60",
   },
@@ -29,7 +29,7 @@ const cards: Card[] = [
     icon: Server,
     title: "Absolute Data Sovereignty",
     body:
-      "Your customer records, field photos, and private financial logs live securely on a physical server inside your building so no external tech corporation can ever lock you out or rent your data back to you.",
+      "All your customer info, photos, and money records stay safely on a physical computer inside your own building. No outside company can ever lock you out or use your data.",
     href: "/what-is-mepclaw",
     accent: "from-amber-200/60 via-orange-200/40 to-rose-200/60",
   },
