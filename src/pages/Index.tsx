@@ -18,7 +18,7 @@ const V1 = () => (
     <Hero />
     <WhatIs />
     <AiEmployee />
-    <Testimonials />
+    
     <CeoQuotes />
     <Comparison />
     <Pricing />
