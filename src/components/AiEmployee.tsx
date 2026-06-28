@@ -13,7 +13,7 @@ const cards: Card[] = [
     icon: Clock,
     title: "Stop Renting Software",
     body:
-      "Replace expensive recurring contracts with a single, one-time investment that drops your baseline platform costs below $50 a month and lets you scale your technician roster infinitely without financial penalty.",
+      "Pay once instead of every month. This keeps your costs under $50 a month and lets you add as many workers as you want for free.",
     href: "/what-is-mepclaw",
     accent: "from-sky-200/60 via-emerald-100/40 to-amber-200/60",
   },
@@ -21,7 +21,7 @@ const cards: Card[] = [
     icon: Trophy,
     title: "Frictionless Field Workflows",
     body:
-      "Your field crew completely avoids clunky app fatigue by managing their daily assignments, logging timesheets, and processing receipt expenses through an incredibly simple, automated chat setup.",
+      "Your workers out in the field do everything through a simple text chat. They can see tasks, log hours, and submit receipts without using a confusing app.",
     href: "/what-is-mepclaw",
     accent: "from-emerald-200/60 via-amber-100/40 to-orange-200/60",
   },
@@ -29,7 +29,7 @@ const cards: Card[] = [
     icon: Server,
     title: "Absolute Data Sovereignty",
     body:
-      "Your customer records, field photos, and private financial logs live securely on a physical server inside your building so no external tech corporation can ever lock you out or rent your data back to you.",
+      "All your customer info, photos, and money records stay safely on a physical computer inside your own building. No outside company can ever lock you out or use your data.",
     href: "/what-is-mepclaw",
     accent: "from-amber-200/60 via-orange-200/40 to-rose-200/60",
   },
@@ -64,7 +64,7 @@ const AiEmployee = () => (
             >
               {/* Illustration area with gradient wash */}
               <div
-                className={`relative h-64 bg-gradient-to-br ${c.accent} flex items-center justify-center overflow-hidden`}
+                className={`relative h-96 bg-gradient-to-br ${c.accent} flex items-center justify-center overflow-hidden`}
               >
                 <div className="absolute inset-0 opacity-30 [background-image:radial-gradient(circle_at_1px_1px,_hsl(var(--foreground))_1px,_transparent_0)] [background-size:8px_8px]" />
                 <div className="relative w-28 h-28 rounded-full bg-card/90 backdrop-blur flex items-center justify-center shadow-soft">
@@ -79,7 +79,7 @@ const AiEmployee = () => (
                 <h3 className="text-2xl font-bold text-foreground tracking-tight mb-4">
                   {c.title}
                 </h3>
-                <p className="text-[15px] text-muted-foreground leading-relaxed mb-6 flex-1">
+                <p className="text-lg text-muted-foreground leading-relaxed mb-6 flex-1">
                   {c.body}
                 </p>
                 <a
@@ -138,11 +138,11 @@ const AiEmployee = () => (
           </div>
 
           {/* Card 3 - big stat */}
-          <div className="rounded-2xl bg-callout border border-border p-10 md:p-14 flex flex-col items-center justify-center text-center min-h-[280px]">
-            <div className="font-serif text-7xl md:text-8xl text-[hsl(var(--accent))] font-bold leading-none mb-6">
+          <div className="rounded-2xl bg-callout border border-border p-10 md:p-14 flex flex-col items-center justify-center text-center min-h-[400px]">
+            <div className="font-serif text-8xl md:text-9xl text-[hsl(var(--accent))] font-bold leading-none mb-6">
               $0
             </div>
-            <p className="text-base md:text-lg text-muted-foreground max-w-sm leading-relaxed">
+            <p className="text-lg md:text-xl text-muted-foreground max-w-sm leading-relaxed">
               Per-User Fees. Add as many trucks and technicians to your fleet as you want without your bill jumping.
             </p>
           </div>
