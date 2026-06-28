@@ -8,7 +8,6 @@ import IntegrationsStrip from "@/components/IntegrationsStrip";
 import RecommendedReading from "@/components/RecommendedReading";
 import Pricing from "@/components/Pricing";
 import Comparison from "@/components/Comparison";
-import Testimonials from "@/components/Testimonials";
 import CtaFooter from "@/components/CtaFooter";
 import SiteFooter from "@/components/SiteFooter";
 import LiveStatusWidget from "@/components/LiveStatusWidget";
