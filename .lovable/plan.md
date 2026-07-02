@@ -1,35 +1,45 @@
+# Plan: Dump all site copy to chat
 
-Goal: Lighten the dark palette to feel closer to Discord's lighter dark mode (Discord uses around `#313338` for chat, `#2B2D31` for sidebar, `#1E1F22` for the deepest layer) while keeping the same blue accent.
+## Goal
+Paste all human-readable marketing text from every page of the site into chat, organized with the page name as a header.
 
-## Current vs proposed (dark theme only)
+## Approach
+Use a headless browser (Playwright) against the running local preview to visit each route and extract only the visible text (stripping code, class names, and hidden nodes). This is more accurate than parsing JSX because it captures the same words a visitor sees, in reading order, including text from shared components (Navbar, Footer, CTAs).
 
-| Token | Current | Proposed | Notes |
-|---|---|---|---|
-| `--background` | `222 14% 10%` (#16181c) | `222 10% 18%` (~#2B2D31) | Page bg → Discord sidebar shade |
-| `--card` | `222 14% 14%` (#1f2227) | `220 8% 23%` (~#36373D) | Cards lift above bg |
-| `--popover` | `222 14% 14%` | `220 8% 23%` | Match card |
-| `--secondary` | `222 14% 18%` | `220 7% 28%` (~#42434A) | Buttons/chips |
-| `--muted` | `222 14% 18%` | `220 7% 28%` | Same |
-| `--surface` | `217 20% 16%` | `220 9% 21%` (~#32343A) | Alt section bands |
-| `--callout` | `217 22% 19%` | `220 9% 26%` (~#3C3E45) | Callouts a touch brighter |
-| `--border` | `220 12% 20%` | `220 6% 32%` (~#4C4E55) | More visible separators |
-| `--input` | `220 12% 20%` | `220 6% 32%` | Match border |
-| `--muted-foreground` | `218 11% 55%` | `220 9% 70%` | Slightly brighter secondary text for contrast on lighter bg |
+## Routes to capture
+Main pages:
+- `/` — Landing (Index)
+- `/what-is-mepclaw`
+- `/about`
+- `/how-it-works`
+- `/pricing`
+- `/faq`
+- `/stack`
+- `/blog` and a sample `/blog/:slug`
 
-Primary blue (`217 91% 60%`), destructive red, jobber green, and the four competitor tint chips stay the same — only the neutral grays shift up.
+Feature pages:
+- `/features/crm`
+- `/features/dashboard`
+- `/features/field-photos`
+- `/features/quotes`
+- `/features/voice-ai`
 
-## Files to change
+Solution pages:
+- `/solutions/discord-bot`
+- `/solutions/discord-overview`
 
-1. **`src/index.css`** — update the `:root` block with the new HSL values above. Light mode (`.light`) untouched.
+## Output format
+Pasted directly in chat as plain text:
 
-That's the entire change. No component edits needed because every section already consumes these tokens (`bg-background`, `bg-card`, `bg-surface`, `bg-callout`, `border-border`, etc.), so the lift will apply site-wide automatically.
+```
+=== PAGE: Landing (/) ===
+<all visible copy in reading order>
 
-## What it'll look like
+=== PAGE: What is MEP Claw (/what-is-mepclaw) ===
+...
+```
 
-- Page background goes from near-black `#16181c` → Discord-ish `#2B2D31`
-- Cards become a clearly lighter `#36373D` floating tile
-- Section bands (savings banner, outcomes) sit between bg and card for gentle striping
-- Borders become visible without being harsh
-- Blue CTA + red ✕ + green/blue/purple/sky competitor chips will pop more against the lighter neutrals
-
-Quick visual verification after applying is recommended since several sections layer translucent tints (`bg-primary/15`, `bg-card/40`) that will read brighter on the new base.
+## Notes
+- No file changes. Read-only extraction.
+- If total output exceeds a single message, I'll split across 2–3 messages grouped by section (main pages, feature pages, solution pages, blog).
+- I'll skip duplicate navbar/footer text after the first page and note "(shared nav/footer omitted)" to keep it readable.
