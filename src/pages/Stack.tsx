@@ -164,53 +164,71 @@ const Stack = () => (
         <div className="max-w-3xl mb-12">
           <p className="eyebrow mb-4"><span>What it replaces</span></p>
           <h2 className="text-3xl md:text-5xl font-bold text-foreground tracking-tightest leading-[1.1] mb-5">
-            One box. A dozen subscriptions, gone.
+            Reduce Expenses to <span className="text-[hsl(var(--accent))]">&lt;$50</span>.
           </h2>
           <p className="text-lg text-muted-foreground">
             Every row below is a paid SaaS tool a typical contractor is renting today. MEP Claw rolls them all onto your Mini PC.
           </p>
         </div>
 
-        <div className="rounded-2xl border border-border overflow-hidden bg-card">
-          <div className="grid grid-cols-12 px-6 py-4 bg-surface border-b border-border text-xs font-bold uppercase tracking-[0.15em] text-muted-foreground">
-            <div className="col-span-4 md:col-span-3">Category</div>
-            <div className="col-span-4 md:col-span-4">What you're paying for today</div>
-            <div className="col-span-4 md:col-span-3">MEP Claw runs</div>
-            <div className="hidden md:block md:col-span-2 text-right">SaaS cost</div>
-          </div>
-          {[
-            ["Voice AI", "Answering service / IVR", "Retell AI", "$200-500/mo"],
-            ["SMS", "Twilio / EZ Texting", "Twilio (your account)", "$50-150/mo"],
-            ["CRM", "Jobber / ServiceTitan / Housecall Pro", "Twenty CRM", "$50-500/mo"],
-            ["Invoicing & Payments", "QuickBooks / FreshBooks", "Invoice Ninja + Stripe", "$30-80/mo"],
-            ["File Storage", "Dropbox / Google Drive", "Nextcloud", "$10-25/mo/user"],
-            ["Jobsite Photos", "CompanyCam", "Immich", "$15-45/mo/user"],
-            ["Team Chat", "Slack", "Discord", "$7-15/mo/user"],
-            ["Pricebook", "Profit Rhino / FieldEdge add-on", "Built-in (2,300+ tasks)", "$50-150/mo"],
-            ["Dispatch & Calendar", "ServiceTitan Dispatch", "Field-Ops + Discord", "Bundled $200+/mo"],
-            ["Receipt Capture", "Expensify / Dext", "Gemini AI extract", "$5-20/mo/user"],
-            ["AI Assistant", "—", "Jarvis (local + OpenRouter)", "—"],
-            ["File Sync / Remote Access", "VPN service", "Tailscale", "$0-20/mo"],
-          ].map(([cat, saas, ours, cost], i) => (
-            <div
-              key={cat}
-              className={`grid grid-cols-12 px-6 py-5 items-center text-sm md:text-base ${
-                i % 2 === 1 ? "bg-surface/40" : ""
-              } border-b border-border last:border-b-0`}
-            >
-              <div className="col-span-4 md:col-span-3 font-semibold text-foreground">{cat}</div>
-              <div className="col-span-4 md:col-span-4 text-muted-foreground line-through decoration-rose-500/60">{saas}</div>
-              <div className="col-span-4 md:col-span-3 font-semibold text-[hsl(var(--accent))]">{ours}</div>
-              <div className="hidden md:block md:col-span-2 text-right text-muted-foreground font-mono text-sm">{cost}</div>
+        {(() => {
+          const rows: Array<[string, string | null, string, boolean]> = [
+            // [category, saas/mo (null = —), mepClaw label, isBadge (true = pill, false = orange text)]
+            ["Voice AI", "$200–500", "Retell · usage", false],
+            ["SMS", "$50–150", "Twilio · usage", false],
+            ["CRM", "$50–500", "Free · Twenty CRM", true],
+            ["Invoicing + pay", "$30–80", "Free · Invoice Ninja", true],
+            ["File storage", "$10–25", "Free · Nextcloud", true],
+            ["Jobsite photos", "$15–45", "Free · Immich", true],
+            ["Team chat", "$7–15", "Free · Discord", true],
+            ["Pricebook", "$50–150", "Free · Built-in", true],
+            ["Dispatch + cal", "$200+", "Free · Field-Ops", true],
+            ["Receipt scan", "$5–20", "Gemini · pennies", false],
+            ["AI assistant", null, "Jarvis · usage", false],
+            ["Remote access", "$0–20", "Free · Tailscale", true],
+          ];
+          return (
+            <div className="rounded-2xl overflow-hidden bg-[#1f1f22] border border-white/5 shadow-elevated">
+              <div className="grid grid-cols-12 px-6 md:px-8 py-4 border-b border-white/5 text-xs uppercase tracking-[0.15em] text-white/50">
+                <div className="col-span-5">category</div>
+                <div className="col-span-3 text-right">saas / mo</div>
+                <div className="col-span-4 text-right">mep claw</div>
+              </div>
+              {rows.map(([cat, saas, ours, isBadge]) => (
+                <div
+                  key={cat}
+                  className="grid grid-cols-12 px-6 md:px-8 py-4 items-center border-b border-white/5 last:border-b-0"
+                >
+                  <div className="col-span-5 font-semibold text-white text-base">{cat}</div>
+                  <div className="col-span-3 text-right text-white/50">
+                    {saas ? <span className="line-through">{saas}</span> : <span>—</span>}
+                  </div>
+                  <div className="col-span-4 flex justify-end">
+                    {isBadge ? (
+                      <span className="inline-flex items-center px-3 py-1.5 rounded-full bg-[#f4ece5] text-[#2a1f1a] text-sm font-medium">
+                        {ours}
+                      </span>
+                    ) : (
+                      <span className="text-[#e67e3c] text-sm font-medium">{ours}</span>
+                    )}
+                  </div>
+                </div>
+              ))}
+              <div className="grid grid-cols-12 px-6 md:px-8 py-5 items-center bg-black/20">
+                <div className="col-span-5 font-bold text-white text-base">Total</div>
+                <div className="col-span-3 text-right text-white font-semibold">$600–1,500</div>
+                <div className="col-span-4 text-right text-[#e67e3c] font-bold">&lt;$50 + usage</div>
+              </div>
             </div>
-          ))}
-        </div>
+          );
+        })()}
 
         <p className="text-sm text-muted-foreground mt-6">
           Add it up and the average contractor is renting $600-1,500/mo of SaaS to do what this one box does for under $50/mo in ongoing costs.
         </p>
       </div>
     </section>
+
 
     {/* HOW IT ALL CONNECTS */}
     <StackFlow />
