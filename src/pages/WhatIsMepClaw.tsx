@@ -7,58 +7,8 @@ import OldVsNew from "@/components/OldVsNew";
 import StackLogosCarousel from "@/components/StackLogosCarousel";
 
 
-const stackLogos = [
-  { name: "Twenty CRM", color: "#7C3AED" },
-  { name: "Immich", color: "#4250AF" },
-  { name: "Invoice Ninja", color: "#000000" },
-  { name: "Nextcloud", color: "#0082C9" },
-  { name: "Retell AI", color: "#10B981" },
-  { name: "NemoClaw", color: "#F97316" },
-  { name: "Twilio", color: "#F22F46" },
-  { name: "Discord", color: "#5865F2" },
-];
 
-const HeroStackVisual = () => {
-  const [idx, setIdx] = useState(0);
-  useEffect(() => {
-    const t = setInterval(() => setIdx((i) => (i + 1) % stackLogos.length), 1800);
-    return () => clearInterval(t);
-  }, []);
-  const logo = stackLogos[idx];
-  return (
-    <div className="w-full aspect-square max-w-sm rounded-2xl border border-border shadow-elevated bg-card p-6 flex flex-col">
-      <div className="text-[11px] font-semibold uppercase tracking-[0.18em] text-muted-foreground mb-4">
-        The Stack
-      </div>
-      <div className="flex-1 flex items-center justify-center relative overflow-hidden">
-        <div
-          key={logo.name}
-          className="flex flex-col items-center gap-4 animate-fade-in"
-        >
-          <div
-            className="w-20 h-20 rounded-2xl flex items-center justify-center text-white text-2xl font-bold shadow-soft"
-            style={{ backgroundColor: logo.color }}
-          >
-            {logo.name.charAt(0)}
-          </div>
-          <div className="text-lg font-bold text-foreground tracking-tight">
-            {logo.name}
-          </div>
-        </div>
-      </div>
-      <div className="flex justify-center gap-1.5 mt-4">
-        {stackLogos.map((_, i) => (
-          <span
-            key={i}
-            className={`h-1 rounded-full transition-all ${
-              i === idx ? "w-6 bg-foreground" : "w-1 bg-border"
-            }`}
-          />
-        ))}
-      </div>
-    </div>
-  );
-};
+
 
 const rows = [
   {
