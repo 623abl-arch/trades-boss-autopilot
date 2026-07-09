@@ -61,7 +61,7 @@ const WhatIsMepClaw = () => (
             </div>
           </div>
           <div className="lg:col-span-5 flex justify-center">
-            <HeroStackVisual />
+            <StackLogosCarousel />
           </div>
         </div>
       </div>
