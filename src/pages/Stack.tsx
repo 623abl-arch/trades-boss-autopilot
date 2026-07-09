@@ -3,8 +3,9 @@ import SiteFooter from "@/components/SiteFooter";
 import StackFlow from "@/components/StackFlow";
 import FullStack from "@/components/FullStack";
 import InteractiveDemo from "@/components/InteractiveDemo";
+import StackLogosCarousel from "@/components/StackLogosCarousel";
 import { Button } from "@/components/ui/button";
-import deskImg from "@/assets/section-desk.jpg";
+
 import {
   Accordion,
   AccordionContent,
