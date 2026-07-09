@@ -151,10 +151,9 @@ const Stack = () => (
             </div>
           </div>
           <div className="lg:col-span-5 flex justify-center">
-            <div className="rounded-2xl overflow-hidden border border-border shadow-elevated bg-card">
-              <img src={deskImg} alt="MEP Claw Mini PC on a desk" className="w-full h-auto block" />
-            </div>
+            <StackLogosCarousel />
           </div>
+
         </div>
       </div>
     </section>
