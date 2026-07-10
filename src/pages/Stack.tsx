@@ -173,7 +173,6 @@ const Stack = () => (
 
         {(() => {
           const rows: Array<[string, string | null, string, boolean]> = [
-            // [category, saas/mo (null = —), mepClaw label, isBadge (true = pill, false = orange text)]
             ["Voice AI", "$200–500", "Retell · usage", false],
             ["SMS", "$50–150", "Twilio · usage", false],
             ["CRM", "$50–500", "Free · Twenty CRM", true],
@@ -188,36 +187,36 @@ const Stack = () => (
             ["Remote access", "$0–20", "Free · Tailscale", true],
           ];
           return (
-            <div className="rounded-2xl overflow-hidden bg-[#1f1f22] border border-white/5 shadow-elevated">
-              <div className="grid grid-cols-12 px-6 md:px-8 py-4 border-b border-white/5 text-xs uppercase tracking-[0.15em] text-white/50">
-                <div className="col-span-5">category</div>
-                <div className="col-span-3 text-right">saas / mo</div>
-                <div className="col-span-4 text-right">mep claw</div>
+            <div className="rounded-2xl overflow-hidden bg-card border border-border shadow-elevated max-w-5xl mx-auto">
+              <div className="grid grid-cols-12 px-6 md:px-8 py-4 border-b border-border text-sm uppercase tracking-[0.15em] text-muted-foreground font-semibold">
+                <div className="col-span-5">Category</div>
+                <div className="col-span-3 text-right">SaaS / mo</div>
+                <div className="col-span-4 text-right">MEP Claw</div>
               </div>
               {rows.map(([cat, saas, ours, isBadge]) => (
                 <div
                   key={cat}
-                  className="grid grid-cols-12 px-6 md:px-8 py-4 items-center border-b border-white/5 last:border-b-0"
+                  className="grid grid-cols-12 px-6 md:px-8 py-4 items-center border-b border-border last:border-b-0"
                 >
-                  <div className="col-span-5 font-semibold text-white text-base">{cat}</div>
-                  <div className="col-span-3 text-right text-white/50">
+                  <div className="col-span-5 font-semibold text-foreground text-lg">{cat}</div>
+                  <div className="col-span-3 text-right text-muted-foreground text-base">
                     {saas ? <span className="line-through">{saas}</span> : <span>—</span>}
                   </div>
                   <div className="col-span-4 flex justify-end">
                     {isBadge ? (
-                      <span className="inline-flex items-center px-3 py-1.5 rounded-full bg-[#f4ece5] text-[#2a1f1a] text-sm font-medium">
+                      <span className="inline-flex items-center px-3 py-1.5 rounded-full bg-accent/15 text-accent text-base font-medium">
                         {ours}
                       </span>
                     ) : (
-                      <span className="text-[#e67e3c] text-sm font-medium">{ours}</span>
+                      <span className="text-accent text-base font-medium">{ours}</span>
                     )}
                   </div>
                 </div>
               ))}
-              <div className="grid grid-cols-12 px-6 md:px-8 py-5 items-center bg-black/20">
-                <div className="col-span-5 font-bold text-white text-base">Total</div>
-                <div className="col-span-3 text-right text-white font-semibold">$600–1,500</div>
-                <div className="col-span-4 text-right text-[#e67e3c] font-bold">&lt;$50 + usage</div>
+              <div className="grid grid-cols-12 px-6 md:px-8 py-5 items-center bg-muted/50">
+                <div className="col-span-5 font-bold text-foreground text-lg">Total</div>
+                <div className="col-span-3 text-right text-foreground font-semibold text-lg">$600–1,500</div>
+                <div className="col-span-4 text-right text-accent font-bold text-lg">&lt;$50 + usage</div>
               </div>
             </div>
           );
