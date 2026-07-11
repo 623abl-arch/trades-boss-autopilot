@@ -85,7 +85,7 @@ const MepReveal = () => {
           </div>
 
           {/* Right - two scrolling photo columns */}
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 max-w-md lg:max-w-lg mx-auto w-full">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-3 max-w-[220px] md:max-w-[420px] mx-auto w-full">
             <ScrollColumn cards={colA} direction="up" />
             <ScrollColumn cards={colB} direction="down" className="hidden md:block" />
           </div>
