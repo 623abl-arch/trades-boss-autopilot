@@ -41,7 +41,7 @@ const ScrollColumn = ({
 }) => {
   const loop = [...cards, ...cards];
   return (
-    <div className={`group relative h-[440px] md:h-[520px] overflow-hidden ${className}`}>
+    <div className={`group relative h-[360px] md:h-[420px] overflow-hidden ${className}`}>
       <div
         className="flex flex-col gap-3 group-hover:[animation-play-state:paused]"
         style={{
@@ -52,8 +52,6 @@ const ScrollColumn = ({
           <PhotoCard key={`${direction}-${i}`} c={c} />
         ))}
       </div>
-      <div className="pointer-events-none absolute inset-x-0 top-0 h-16 bg-gradient-to-b from-background to-transparent" />
-      <div className="pointer-events-none absolute inset-x-0 bottom-0 h-16 bg-gradient-to-t from-background to-transparent" />
     </div>
   );
 };
