@@ -41,7 +41,7 @@ const ScrollColumn = ({
 }) => {
   const loop = [...cards, ...cards];
   return (
-    <div className={`group relative h-[360px] md:h-[420px] overflow-hidden ${className}`}>
+    <div className={`group relative h-[320px] md:h-[380px] overflow-hidden ${className}`}>
       <div
         className="flex flex-col gap-3 group-hover:[animation-play-state:paused]"
         style={{
