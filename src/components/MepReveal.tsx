@@ -20,12 +20,12 @@ const colB: Card[] = [
 ];
 
 const PhotoCard = ({ c }: { c: Card }) => (
-  <div className="relative w-full aspect-[3/4] rounded-2xl overflow-hidden shadow-elevated border border-border">
+  <div className="relative w-full aspect-square rounded-2xl overflow-hidden shadow-elevated border border-border">
     <img src={c.img} alt={c.name} loading="lazy" className="w-full h-full object-cover" />
     <div className="absolute inset-x-0 bottom-0 h-1/2 bg-gradient-to-t from-black/85 via-black/40 to-transparent" />
-    <div className="absolute inset-x-0 bottom-0 p-4">
-      <div className="text-white font-bold text-base leading-tight">{c.name}</div>
-      <div className="text-white/75 text-sm mt-0.5">{c.company}</div>
+    <div className="absolute inset-x-0 bottom-0 p-3">
+      <div className="text-white font-bold text-sm leading-tight">{c.name}</div>
+      <div className="text-white/75 text-xs mt-0.5">{c.company}</div>
     </div>
   </div>
 );
@@ -41,7 +41,7 @@ const ScrollColumn = ({
 }) => {
   const loop = [...cards, ...cards];
   return (
-    <div className={`group relative h-[440px] md:h-[520px] overflow-hidden ${className}`}>
+    <div className={`group relative h-[320px] md:h-[380px] overflow-hidden ${className}`}>
       <div
         className="flex flex-col gap-3 group-hover:[animation-play-state:paused]"
         style={{
@@ -52,8 +52,6 @@ const ScrollColumn = ({
           <PhotoCard key={`${direction}-${i}`} c={c} />
         ))}
       </div>
-      <div className="pointer-events-none absolute inset-x-0 top-0 h-16 bg-gradient-to-b from-background to-transparent" />
-      <div className="pointer-events-none absolute inset-x-0 bottom-0 h-16 bg-gradient-to-t from-background to-transparent" />
     </div>
   );
 };
@@ -87,7 +85,7 @@ const MepReveal = () => {
           </div>
 
           {/* Right - two scrolling photo columns */}
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 max-w-md lg:max-w-lg mx-auto w-full">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-3 max-w-[220px] md:max-w-[420px] mx-auto w-full">
             <ScrollColumn cards={colA} direction="up" />
             <ScrollColumn cards={colB} direction="down" className="hidden md:block" />
           </div>
