@@ -5,6 +5,7 @@ import QuantifiedOutcomes from "@/components/QuantifiedOutcomes";
 import WhoItsFor from "@/components/WhoItsFor";
 import OldVsNew from "@/components/OldVsNew";
 import StackLogosCarousel from "@/components/StackLogosCarousel";
+import CeoQuotes from "@/components/CeoQuotes";
 
 
 
@@ -109,6 +110,7 @@ const WhatIsMepClaw = () => (
 
     {/* CTA */}
     <QuantifiedOutcomes />
+    <CeoQuotes />
     <WhoItsFor />
     <OldVsNew />
     <section className="bg-surface slant-top py-24">
