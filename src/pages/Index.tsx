@@ -2,7 +2,7 @@ import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
 import ProvenStats from "@/components/ProvenStats";
 import WhatIs from "@/components/WhatIs";
-import CeoQuotes from "@/components/CeoQuotes";
+import MepReveal from "@/components/MepReveal";
 import AiEmployee from "@/components/AiEmployee";
 import IntegrationsStrip from "@/components/IntegrationsStrip";
 import RecommendedReading from "@/components/RecommendedReading";
@@ -19,7 +19,7 @@ const V1 = () => (
     <WhatIs />
     <AiEmployee />
     
-    <CeoQuotes />
+    <MepReveal />
     <Comparison />
     <Pricing />
     <RecommendedReading />
