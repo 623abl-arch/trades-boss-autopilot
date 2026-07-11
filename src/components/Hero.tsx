@@ -87,8 +87,9 @@ const Hero = () => {
   const [active, setActive] = useState(0);
 
   useEffect(() => {
-    const id = setInterval(() => setActive((i) => (i + 1) % slides.length), 5000);
+    const id = setInterval(() => setActive((i) => (i + 1) % slides.length), 9000);
     return () => clearInterval(id);
+
   }, []);
 
   const slide = slides[active];
@@ -146,8 +147,9 @@ const Hero = () => {
                   <span
                     key={`bar-${active}`}
                     className="absolute left-3 right-3 bottom-1 h-0.5 rounded-full bg-[hsl(var(--accent))]/70 origin-left"
-                    style={{ animation: "hero-tab-progress 5s linear forwards" }}
+                    style={{ animation: "hero-tab-progress 9s linear forwards" }}
                   />
+
                 )}
               </button>
             ))}
