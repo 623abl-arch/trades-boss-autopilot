@@ -41,11 +41,11 @@ const ScrollColumn = ({
 }) => {
   const loop = [...cards, ...cards];
   return (
-    <div className={`group relative h-[640px] md:h-[720px] overflow-hidden ${className}`}>
+    <div className={`group relative h-[440px] md:h-[520px] overflow-hidden ${className}`}>
       <div
-        className="flex flex-col gap-5 group-hover:[animation-play-state:paused]"
+        className="flex flex-col gap-3 group-hover:[animation-play-state:paused]"
         style={{
-          animation: `mep-scroll-${direction} 28s linear infinite`,
+          animation: `mep-scroll-${direction} 32s linear infinite`,
         }}
       >
         {loop.map((c, i) => (
@@ -65,20 +65,20 @@ const MepReveal = () => {
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
           {/* Left - MEP typography */}
           <div>
-            <div className="space-y-2 md:space-y-4">
+            <div className="space-y-1 md:space-y-2">
               {["Mechanical", "Electrical", "Plumbing"].map((word) => (
                 <h2
                   key={word}
-                  className="font-bold tracking-tightest leading-[0.95] text-foreground text-[clamp(3.5rem,9vw,7.5rem)]"
+                  className="font-bold tracking-tightest leading-[0.95] text-foreground text-[clamp(3rem,7vw,6rem)]"
                 >
-                  <span className="text-[hsl(var(--accent))] text-[1.35em] leading-none align-[-0.05em] font-black">
+                  <span className="text-[hsl(var(--accent))] font-black">
                     {word[0]}
                   </span>
-                  <span>{word.slice(1)}</span>
+                  <span className="text-[0.55em] font-bold align-baseline">{word.slice(1)}</span>
                 </h2>
               ))}
             </div>
-            <p className="mt-10 max-w-md text-lg md:text-xl text-muted-foreground leading-relaxed">
+            <p className="mt-8 max-w-md text-base md:text-lg text-muted-foreground leading-relaxed">
               The trades that keep buildings running.{" "}
               <span className="text-foreground font-medium">
                 MEP Claw is built for all of them.
@@ -87,7 +87,7 @@ const MepReveal = () => {
           </div>
 
           {/* Right - two scrolling photo columns */}
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 max-w-md lg:max-w-lg mx-auto w-full">
             <ScrollColumn cards={colA} direction="up" />
             <ScrollColumn cards={colB} direction="down" className="hidden md:block" />
           </div>
