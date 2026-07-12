@@ -8,13 +8,13 @@ type LogoItem = {
 };
 
 const stackLogos: LogoItem[] = [
-  { name: "CRM", color: "#7C3AED", fallbackMark: "20" },
-  { name: "Photos", slug: "immich", color: "#4250AF" },
-  { name: "Invoices", color: "#000000", fallbackMark: "IN" },
-  { name: "File Storage", slug: "nextcloud", color: "#0082C9" },
-  { name: "Voice AI", color: "#10B981", fallbackMark: "R" },
-  { name: "AI Agent", color: "#F97316", fallbackMark: "N" },
-  { name: "SMS", slug: "twilio", color: "#F22F46" },
+  { name: "CRM", color: "#7C3AED", fallbackMark: "CRM" },
+  { name: "Photos", color: "#4250AF", fallbackMark: "P" },
+  { name: "Invoices", color: "#000000", fallbackMark: "INV" },
+  { name: "File Storage", color: "#0082C9", fallbackMark: "FS" },
+  { name: "Voice AI", color: "#10B981", fallbackMark: "VAI" },
+  { name: "AI Agent", color: "#F97316", fallbackMark: "AI" },
+  { name: "SMS", color: "#F22F46", fallbackMark: "SMS" },
   { name: "Discord", slug: "discord", color: "#5865F2" },
 ];
 
