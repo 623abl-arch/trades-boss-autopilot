@@ -76,8 +76,8 @@ const slides: Slide[] = [
       </>
     ),
     visual: (
-      <div className="rounded-2xl border border-border bg-[#1e1f22] shadow-floating overflow-hidden p-4 md:p-6 flex items-center justify-center">
-        <img src={dispatchButtons.url} alt="Discord dispatch buttons" className="w-full h-auto rounded-lg" />
+      <div className="rounded-2xl border border-border bg-[#1e1f22] shadow-floating overflow-hidden p-4 md:p-6 flex items-center justify-center h-full min-h-[520px]">
+        <img src={dispatchButtons.url} alt="Discord dispatch buttons" className="max-w-full max-h-full w-auto h-auto object-contain rounded-lg" />
       </div>
     ),
   },
@@ -99,7 +99,7 @@ const Hero = () => {
       <div className="absolute inset-0 hero-wash pointer-events-none" aria-hidden="true" />
 
       <div className="container max-w-[1680px] mx-auto px-6 pt-20 md:pt-28 pb-20 md:pb-28 relative">
-        <div className="grid lg:grid-cols-12 gap-12 lg:gap-16 items-center">
+        <div className="grid lg:grid-cols-12 gap-12 lg:gap-16 items-center lg:min-h-[620px]">
           {/* Left - copy */}
           <div className="lg:col-span-7">
             <div key={`h-${active}`} className="animate-fade-in">
@@ -122,8 +122,8 @@ const Hero = () => {
 
           {/* Right - visual */}
           <div className="lg:col-span-5 relative">
-            <div key={`v-${active}`} className="animate-fade-in">
-              {slide.visual}
+            <div key={`v-${active}`} className="animate-fade-in min-h-[520px] md:min-h-[560px] flex">
+              <div className="w-full flex">{slide.visual}</div>
             </div>
           </div>
         </div>
