@@ -17,9 +17,9 @@ const rows = [
       "Scrolling through endless personal phone photos trying to find a specific pipe repair from months ago when a customer asks for proof.",
     multiplier: "100%",
     multiplierLabel: "Visual map histories",
-    newTitle: "Geotagged Photos Photo Vault",
+    newTitle: "Geotagged Photo Vault",
     newBody:
-      "Open-source Photos automatically tags your job photos and pins them onto a visual map by service address. Pull up any property to see its entire visual history instantly.",
+      "Your photo library automatically tags job photos and pins them onto a visual map by service address. Pull up any property to see its entire visual history instantly.",
   },
   {
     task: "Tracking Material Receipts",
