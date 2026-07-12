@@ -18,7 +18,7 @@ const Hardware = () => (
             One Mini PC. Sits on your desk. Runs the whole business.
           </h2>
           <p className="text-lg text-muted-foreground leading-relaxed mb-5">
-            Purpose-built hardware - no Apple premium tax. We configure it for your trade, ship it to your door, and you plug it in. A Public Routing auto-connects it so your team and Voice AI can reach it from anywhere - securely, without opening a single port.
+            Purpose-built hardware - no Apple premium tax. We configure it for your trade, ship it to your door, and you plug it in. Public routing auto-connects it so your team and voice AI can reach it from anywhere - securely, without opening a single port.
           </p>
           <p className="text-lg text-muted-foreground leading-relaxed mb-10">
             CRM, invoicing, voice AI, Discord bot, file storage, photos, AI brain - all on one box that costs less than two months of ServiceTitan.
