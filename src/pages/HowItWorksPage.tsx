@@ -30,10 +30,10 @@ const timeline = [
     week: "Week 3",
     title: "The Agent Goes Live",
     items: [
-      "Voice AI voice agent configured with your services, coverage area, and tone",
+      "Voice agent configured with your services, coverage area, and tone",
       "Discord bot customized with your team roles and job types",
       "Quote engine tested: AI Quick Quote, pricebook lookup, and manual override all working",
-      "Invoices templates branded to your company",
+      "Invoice templates branded to your company",
     ],
   },
   {
