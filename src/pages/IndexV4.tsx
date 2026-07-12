@@ -52,7 +52,7 @@ const tabs = [
     k: "field",
     label: "Field",
     title: "Photos that file themselves.",
-    body: "Crews drop job photos in their channel. A 4-hour sticky window routes them automatically into the right client folder on File Storage. No tagging, no upload screens.",
+    body: "Crews drop job photos in their channel. A 4-hour sticky window routes them automatically into the right client folder in your file storage. No tagging, no upload screens.",
     log: [
       "> 12 photos dropped",
       "✓ sticky · 1421 Oak St · Cortez",
@@ -64,7 +64,7 @@ const tabs = [
 
 const bento = [
   { icon: Cpu, t: "One Mini PC", d: "Runs the entire stack on your desk." },
-  { icon: Shield, t: "Remote Access + Cloudflare", d: "Private mesh, public on your domain." },
+  { icon: Shield, t: "Remote Access + Public Routing", d: "Private mesh, public on your domain." },
   { icon: Database, t: "Nightly backups", d: "To a NAS in the closet. +$600." },
   { icon: Radio, t: "Discord field UI", d: "Your team already uses it." },
   { icon: Zap, t: "<$50/mo, all in", d: "SMS + VPS + optional AI tokens." },
