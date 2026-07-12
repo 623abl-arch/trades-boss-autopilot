@@ -116,11 +116,11 @@ const IndexV2 = () => {
             >
               <p>
                 For two decades the trades have been handed the same bargain: rent a stack of subscriptions
-                — Jobber for scheduling, ServiceTitan for dispatch, CompanyCam for photos, SMS for SMS —
+                — Jobber for scheduling, ServiceTitan for dispatch, CompanyCam for photos, SMS for messaging —
                 and let your customer list, your pricebook, and your job history live on someone else's server.
               </p>
               <p>
-                MEP Claw is the counter-offer. CRM, Invoices, File Storage, Photos, a Voice AI
+                MEP Claw is the counter-offer. CRM, Invoices, File Storage, Photos, a voice AI
                 agent and a Discord-based field interface, all pre-installed on a single Mini PC on your
                 desk. Reachable from anywhere via Remote Access. Backed up to a NAS in the closet. Replaceable
                 at any time because every piece is open source.
