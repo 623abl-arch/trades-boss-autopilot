@@ -28,7 +28,7 @@ const stackRows = [
     tool: "Photos",
     note: "Geotagged jobsite photos on a map.",
     detail:
-      "Field photos uploaded in Discord get routed to Photos, auto-organized by job site address, and tagged for quick recall during invoicing, warranty work, or marketing.",
+      "Field photos uploaded in Discord get routed to your photo library, auto-organized by job site address, and tagged for quick recall during invoicing, warranty work, or marketing.",
   },
   {
     layer: "Voice AI",
