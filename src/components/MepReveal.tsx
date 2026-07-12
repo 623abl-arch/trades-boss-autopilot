@@ -20,7 +20,7 @@ const colB: Card[] = [
 ];
 
 const PhotoCard = ({ c }: { c: Card }) => (
-  <div className="relative w-full aspect-square rounded-2xl overflow-hidden shadow-elevated border border-border">
+  <div className="relative flex-shrink-0 w-[140px] h-[140px] md:w-[160px] md:h-[160px] rounded-2xl overflow-hidden shadow-elevated border border-border">
     <img src={c.img} alt={c.name} loading="lazy" className="w-full h-full object-cover" />
     <div className="absolute inset-x-0 bottom-0 h-1/2 bg-gradient-to-t from-black/85 via-black/40 to-transparent" />
     <div className="absolute inset-x-0 bottom-0 p-3">
@@ -30,22 +30,23 @@ const PhotoCard = ({ c }: { c: Card }) => (
   </div>
 );
 
-const ScrollColumn = ({
+const ScrollLane = ({
   cards,
   direction,
   className = "",
 }: {
   cards: Card[];
-  direction: "up" | "down";
+  direction: "left" | "right";
   className?: string;
 }) => {
   const loop = [...cards, ...cards];
   return (
-    <div className={`group relative h-[320px] md:h-[380px] overflow-hidden ${className}`}>
+    <div className={`group relative h-[140px] md:h-[160px] overflow-hidden ${className}`}>
       <div
-        className="flex flex-col gap-3 group-hover:[animation-play-state:paused]"
+        className="flex gap-3 group-hover:[animation-play-state:paused]"
         style={{
           animation: `mep-scroll-${direction} 32s linear infinite`,
+          width: "max-content",
         }}
       >
         {loop.map((c, i) => (
@@ -84,22 +85,22 @@ const MepReveal = () => {
             </p>
           </div>
 
-          {/* Right - two scrolling photo columns */}
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-3 max-w-[220px] md:max-w-[420px] mx-auto w-full">
-            <ScrollColumn cards={colA} direction="up" />
-            <ScrollColumn cards={colB} direction="down" className="hidden md:block" />
+          {/* Right - two horizontal scrolling photo lanes */}
+          <div className="flex flex-col gap-3 max-w-[220px] md:max-w-[420px] mx-auto w-full">
+            <ScrollLane cards={colA} direction="left" />
+            <ScrollLane cards={colB} direction="right" />
           </div>
         </div>
       </div>
 
       <style>{`
-        @keyframes mep-scroll-up {
-          0% { transform: translateY(0); }
-          100% { transform: translateY(-50%); }
+        @keyframes mep-scroll-left {
+          0% { transform: translateX(0); }
+          100% { transform: translateX(-50%); }
         }
-        @keyframes mep-scroll-down {
-          0% { transform: translateY(-50%); }
-          100% { transform: translateY(0); }
+        @keyframes mep-scroll-right {
+          0% { transform: translateX(-50%); }
+          100% { transform: translateX(0); }
         }
       `}</style>
     </section>
