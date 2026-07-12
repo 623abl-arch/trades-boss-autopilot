@@ -9,7 +9,7 @@ const SERVICES = [
   "Invoices",
   "File Storage",
   "Voice AI",
-  "AI Engine AI Brain",
+  "AI Engine",
   "Discord Bot (Jarvis)",
   "Mini PC node",
 ];
