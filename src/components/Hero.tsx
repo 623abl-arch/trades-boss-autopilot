@@ -122,8 +122,8 @@ const Hero = () => {
 
           {/* Right - visual */}
           <div className="lg:col-span-5 relative">
-            <div key={`v-${active}`} className="animate-fade-in">
-              {slide.visual}
+            <div key={`v-${active}`} className="animate-fade-in min-h-[520px] md:min-h-[560px] flex">
+              <div className="w-full flex">{slide.visual}</div>
             </div>
           </div>
         </div>
