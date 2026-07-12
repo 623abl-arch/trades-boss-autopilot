@@ -49,14 +49,14 @@ const stackRows = [
     tool: "SMS",
     note: "Inbound + outbound. A2P 10DLC compliant.",
     detail:
-      "Automated confirmations, reminders, review requests, and on-the-way texts - sent on your own SMS account so you keep the number and the deliverability reputation.",
+      "Automated confirmations, reminders, review requests, and on-the-way texts - sent on your own messaging account so you keep the number and the deliverability reputation.",
   },
   {
     layer: "Field Communication",
     tool: "Discord + Mobile Briefings",
     note: "Where your crew already lives.",
     detail:
-      "Discord is the ops hub - channels for new jobs, dispatch, photos, quote approvals. Mobile Briefings pushes your morning briefing straight to your phone. Both run free, on every device, and need zero training.",
+      "Discord is the ops hub - channels for new jobs, dispatch, photos, quote approvals. Mobile briefings push your morning summary straight to your phone. Both run free, on every device, and need zero training.",
   },
 ];
 
