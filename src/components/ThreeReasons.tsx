@@ -1,7 +1,7 @@
 import { useEffect, useState, useRef } from "react";
 
 const terminalLines = [
-  "$ cloudflared tunnel --config mepclaw.yml",
+  "$ mepclaw tunnel --config mepclaw.yml",
   "INFO  Starting tunnel...",
   "INFO  Route dns mepclaw.com → 192.168.1.50",
   "✓ Tunnel established.",
