@@ -50,7 +50,7 @@ const timeline = [
     title: "SMS Goes Live",
     items: [
       "SMS A2P approved - automated SMS to customers now active",
-      "Review follow-up texts, job status updates, and morning briefings via Mobile Briefings enabled",
+      "Review follow-up texts, job status updates, and morning briefings via mobile push enabled",
     ],
   },
 ];
@@ -60,7 +60,7 @@ const onboardingItems = [
   "Map your service area and job types",
   "Review your existing pricebook or build one together",
   "Confirm hardware tier that fits your team size",
-  "Set up your Public Routing and domain routing live on the call",
+  "Set up your public routing and domain routing live on the call",
   "Answer every question before a single dollar ships",
 ];
 
@@ -192,7 +192,7 @@ const HowItWorksPage = () => (
           </table>
         </div>
         <p className="text-muted-foreground text-base text-center max-w-3xl mx-auto leading-relaxed">
-          Everything else - CRM, invoicing, file storage, photo management, Discord and Mobile Briefings bots - runs on your hardware.{" "}
+          Everything else - CRM, invoicing, file storage, photo management, Discord and mobile briefing bots - runs on your hardware.{" "}
           <span className="text-foreground font-semibold">Zero subscription cost.</span>
         </p>
       </div>
