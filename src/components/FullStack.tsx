@@ -79,7 +79,7 @@ const FullStack = () => {
         <div className="card-soft overflow-hidden">
           <div className="hidden md:grid grid-cols-12 px-10 py-5 border-b border-border bg-surface">
             <div className="col-span-3 text-xs font-semibold uppercase tracking-wider text-muted-foreground">Layer</div>
-            <div className="col-span-3 text-xs font-semibold uppercase tracking-wider text-muted-foreground">Tool</div>
+            <div className="col-span-3 text-xs font-semibold uppercase tracking-wider text-muted-foreground">Category</div>
             <div className="col-span-6 text-xs font-semibold uppercase tracking-wider text-muted-foreground">Why it's there</div>
           </div>
           {stackRows.map((r, i) => {
