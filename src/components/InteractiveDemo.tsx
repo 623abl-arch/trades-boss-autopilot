@@ -73,7 +73,7 @@ const DiscordPanel = () => (
     {[
       { who: "Ryan (Owner)", color: "bg-blue-500", text: "new quote for John Smith, water heater 50gal replace" },
       { who: "Jarvis (AI)", color: "bg-primary", text: "Pulling pricebook... Materials $612, labor 4hrs $480. Total $1,092.40" },
-      { who: "Jarvis (AI)", color: "bg-primary", text: "📄 Quote_Smith.pdf generated in Invoices · emailed to john@smith.com" },
+      { who: "Jarvis (AI)", color: "bg-primary", text: "📄 Quote_Smith.pdf generated · emailed to john@smith.com" },
     ].map((m, i) => (
       <div
         key={i}
