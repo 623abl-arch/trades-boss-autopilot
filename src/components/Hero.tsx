@@ -76,8 +76,8 @@ const slides: Slide[] = [
       </>
     ),
     visual: (
-      <div className="rounded-2xl border border-border bg-[#1e1f22] shadow-floating overflow-hidden p-4 md:p-6 flex items-center justify-center">
-        <img src={dispatchButtons.url} alt="Discord dispatch buttons" className="w-full h-auto rounded-lg" />
+      <div className="rounded-2xl border border-border bg-[#1e1f22] shadow-floating overflow-hidden p-4 md:p-6 flex items-center justify-center h-full min-h-[520px]">
+        <img src={dispatchButtons.url} alt="Discord dispatch buttons" className="max-w-full max-h-full w-auto h-auto object-contain rounded-lg" />
       </div>
     ),
   },
