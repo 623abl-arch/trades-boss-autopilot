@@ -140,7 +140,7 @@ const DiscordQuoteDemo = () => {
               </div>
 
               <div className="mt-2 flex items-center gap-3 text-[10px] text-white/40">
-                <span>✓ Saved to Invoice Ninja</span>
+                <span>✓ Saved to Invoices</span>
                 <span>·</span>
                 <span>Sent to customer</span>
               </div>

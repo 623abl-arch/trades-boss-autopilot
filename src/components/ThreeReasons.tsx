@@ -1,16 +1,16 @@
 import { useEffect, useState, useRef } from "react";
 
 const terminalLines = [
-  "$ cloudflared tunnel --config mepclaw.yml",
+  "$ mepclaw tunnel --config mepclaw.yml",
   "INFO  Starting tunnel...",
   "INFO  Route dns mepclaw.com → 192.168.1.50",
   "✓ Tunnel established.",
   "",
   "$ docker compose up -d",
-  "  ✓ twenty-crm        ... running",
-  "  ✓ invoice-ninja      ... running",
-  "  ✓ nextcloud          ... running",
-  "  ✓ immich-photos      ... running",
+  "  ✓ crm                ... running",
+  "  ✓ invoices           ... running",
+  "  ✓ file-storage       ... running",
+  "  ✓ photos             ... running",
   "",
   "ALL SYSTEMS LOCAL.",
 ];
@@ -61,10 +61,10 @@ function TerminalAnimation() {
 }
 
 const connectionLines = [
-  { service: "TWENTY CRM", status: "CONNECTED" },
-  { service: "INVOICE NINJA", status: "CONNECTED" },
-  { service: "RETELL AI VOICE", status: "CONNECTED" },
-  { service: "NEXTCLOUD FILES", status: "CONNECTED" },
+  { service: "CRM", status: "CONNECTED" },
+  { service: "INVOICES", status: "CONNECTED" },
+  { service: "VOICE AI", status: "CONNECTED" },
+  { service: "FILE STORAGE", status: "CONNECTED" },
   { service: "DISCORD BOT", status: "LIVE" },
   { service: "AGENT READY.", status: "", final: true },
 ];
@@ -117,7 +117,7 @@ function ConnectionFeed() {
 }
 
 const timelineEvents = [
-  { time: "6:00 AM", event: "Morning briefing sent via Telegram" },
+  { time: "6:00 AM", event: "Morning briefing sent via Mobile Briefings" },
   { time: "9:15 AM", event: "Inbound call answered by AI" },
   { time: "10:30 AM", event: "Quote sent automatically" },
   { time: "1:00 PM", event: "Jobsite photos geotagged & filed" },

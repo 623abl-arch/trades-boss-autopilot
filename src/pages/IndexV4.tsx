@@ -28,7 +28,7 @@ const tabs = [
     k: "voice",
     label: "Voice AI",
     title: "A receptionist that doesn't sleep.",
-    body: "Retell AI fields every inbound call 24/7, qualifies the job, books it on the dispatch board, and posts a confirmation to the team channel before the phone stops ringing.",
+    body: "Voice AI fields every inbound call 24/7, qualifies the job, books it on the dispatch board, and posts a confirmation to the team channel before the phone stops ringing.",
     log: [
       "> incoming · +1 512 …",
       "✓ intent · water heater install",
@@ -52,7 +52,7 @@ const tabs = [
     k: "field",
     label: "Field",
     title: "Photos that file themselves.",
-    body: "Crews drop job photos in their channel. A 4-hour sticky window routes them automatically into the right client folder on Nextcloud. No tagging, no upload screens.",
+    body: "Crews drop job photos in their channel. A 4-hour sticky window routes them automatically into the right client folder in your file storage. No tagging, no upload screens.",
     log: [
       "> 12 photos dropped",
       "✓ sticky · 1421 Oak St · Cortez",
@@ -64,10 +64,10 @@ const tabs = [
 
 const bento = [
   { icon: Cpu, t: "One Mini PC", d: "Runs the entire stack on your desk." },
-  { icon: Shield, t: "Tailscale + Cloudflare", d: "Private mesh, public on your domain." },
+  { icon: Shield, t: "Remote Access + Public Routing", d: "Private mesh, public on your domain." },
   { icon: Database, t: "Nightly backups", d: "To a NAS in the closet. +$600." },
   { icon: Radio, t: "Discord field UI", d: "Your team already uses it." },
-  { icon: Zap, t: "<$50/mo, all in", d: "Twilio + VPS + optional AI tokens." },
+  { icon: Zap, t: "<$50/mo, all in", d: "SMS + VPS + optional AI tokens." },
   { icon: Terminal, t: "Open source, top to bottom", d: "Replaceable. No lock-in." },
 ];
 

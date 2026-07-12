@@ -35,14 +35,14 @@ const VoicePanel = () => (
   <div key="voice" className="animate-fade-in space-y-3">
     <div className="flex items-center gap-2 text-xs text-muted-foreground mb-4">
       <span className="h-2 w-2 rounded-full bg-emerald-500 animate-pulse" />
-      Retell · inbound call · 00:42
+      Voice AI · inbound call · 00:42
     </div>
     {[
       { who: "Caller", text: "Hi, my water heater is leaking everywhere." },
       { who: "Jarvis (AI)", text: "Sorry to hear that. Can I get your address so I can dispatch a tech?" },
       { who: "Caller", text: "412 Oak Ridge Drive, Clearwater." },
       { who: "Jarvis (AI)", text: "Got it. I have a tech tomorrow at 9 AM. Booking now." },
-      { who: "System", text: "✓ Client created in Twenty CRM · Job #2241 opened · Discord notified" },
+      { who: "System", text: "✓ Client created in CRM · Job #2241 opened · Discord notified" },
       { who: "Jarvis (AI)", text: "You're booked. Confirmation just texted to your phone." },
     ].map((m, i) => (
       <div
@@ -73,7 +73,7 @@ const DiscordPanel = () => (
     {[
       { who: "Ryan (Owner)", color: "bg-blue-500", text: "new quote for John Smith, water heater 50gal replace" },
       { who: "Jarvis (AI)", color: "bg-primary", text: "Pulling pricebook... Materials $612, labor 4hrs $480. Total $1,092.40" },
-      { who: "Jarvis (AI)", color: "bg-primary", text: "📄 Quote_Smith.pdf generated in Invoice Ninja · emailed to john@smith.com" },
+      { who: "Jarvis (AI)", color: "bg-primary", text: "📄 Quote_Smith.pdf generated · emailed to john@smith.com" },
     ].map((m, i) => (
       <div
         key={i}
@@ -100,10 +100,10 @@ const DiscordPanel = () => (
 
 const QuotePanel = () => (
   <div key="quote" className="animate-fade-in space-y-3">
-    <div className="text-xs text-muted-foreground mb-2">Invoice Ninja webhook received · client approved Quote_Smith.pdf</div>
+    <div className="text-xs text-muted-foreground mb-2">Invoice webhook received · client approved Quote_Smith.pdf</div>
     {[
       { label: "Quote status", value: "✓ Approved" },
-      { label: "Twenty CRM", value: "Job #2241 → Scheduled" },
+      { label: "CRM", value: "Job #2241 → Scheduled" },
       { label: "Discord", value: "#field-ops notified" },
       { label: "Calendar", value: "Visit booked Tue 9 AM" },
       { label: "Invoice", value: "Auto-generated on completion" },
@@ -129,7 +129,7 @@ const QuotePanel = () => (
 const CrmPanel = () => {
   const cols = [
     { name: "Field Tech in Discord", color: "bg-muted", cards: ["\"new job for Mark - water heater 412 Oak Ridge\""] },
-    { name: "Twenty CRM", color: "bg-blue-500/20", cards: ["Client: Mark T.", "Job #2242 created", "Visit assigned: Mark"] },
+    { name: "CRM", color: "bg-blue-500/20", cards: ["Client: Mark T.", "Job #2242 created", "Visit assigned: Mark"] },
     { name: "Calendar", color: "bg-emerald-500/20", cards: ["Tue 9 AM - Mark @ Oak Ridge", "SMS confirmation sent"] },
   ];
   return (

@@ -20,16 +20,16 @@ const rows = [
   },
   {
     eyebrow: "Your data",
-    title: "The Twenty CRM Dashboard.",
-    body: "Your customer and job history belong entirely to you, free from restrictive licensing. At the center of MEP Claw is a self-hosted instance of Twenty CRM, safely managing nearly a thousand rows of rich customer profiles, job scopes, individual visits, and communication history within your private network.",
-    visualLabel: "Twenty CRM dashboard",
+    title: "The CRM Dashboard.",
+    body: "Your customer and job history belong entirely to you, free from restrictive licensing. At the center of MEP Claw is a self-hosted CRM, safely managing nearly a thousand rows of rich customer profiles, job scopes, individual visits, and communication history within your private network.",
+    visualLabel: "CRM dashboard",
     reverse: true,
   },
   {
     eyebrow: "Field ops",
     title: "Address-Based Photo Routing.",
-    body: "Clean up your company's camera rolls automatically. When technicians upload job site photos to Discord, the field-ops engine passes them to a self-hosted Immich photo server. The system automatically categorizes and organizes the images into dedicated visual albums linked to the customer's physical service address.",
-    visualLabel: "Immich photo routing",
+    body: "Clean up your company's camera rolls automatically. When technicians upload job site photos to Discord, the field-ops engine passes them to a self-hosted photo server. The system automatically categorizes and organizes the images into dedicated visual albums linked to the customer's physical service address.",
+    visualLabel: "Photo routing",
   },
   {
     eyebrow: "AI built in",

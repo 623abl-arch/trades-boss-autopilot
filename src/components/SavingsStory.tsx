@@ -22,7 +22,7 @@ const SavingsStory = () => (
 
           <div className="lg:col-span-7">
             <p className="text-lg text-muted-foreground leading-relaxed mb-8">
-              Burning $542/month on Jobber + CompanyCam + Twilio + cloud storage. Spending 12 hours a week on admin after the truck pulled in. After switching: <span className="text-foreground font-medium">~$20/month total, ~10 hours back per week</span> - time he now spends with his kids or running an extra job.
+              Burning $542/month on Jobber + CompanyCam + SMS + cloud storage. Spending 12 hours a week on admin after the truck pulled in. After switching: <span className="text-foreground font-medium">~$20/month total, ~10 hours back per week</span> - time he now spends with his kids or running an extra job.
             </p>
 
             <div className="grid grid-cols-2 md:grid-cols-4 gap-3">

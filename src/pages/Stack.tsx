@@ -15,88 +15,88 @@ import {
 
 const tools = [
   {
-    name: "Twenty CRM",
-    category: "CRM + Field Ops",
+    name: "CRM",
+    category: "Customer & field ops",
     description:
       "Manages every customer, job, lead, and interaction. Tracks job status, contact history, and field notes.",
     whyNot:
-      "Why not Jobber or ServiceTitan? They charge $100-400/mo and own your data. Twenty runs on your hardware. Your data never leaves your building.",
+      "Why not Jobber or ServiceTitan? They charge $100-400/mo and own your data. Ours runs on your hardware. Your data never leaves your building.",
     cost: "$0/mo (self-hosted)",
     cloud: "$150-400/mo",
   },
   {
-    name: "Invoice Ninja",
-    category: "Invoicing + Quotes",
+    name: "Invoices",
+    category: "Quotes & billing",
     description:
       "Sends branded quotes and invoices, tracks payments, handles multiple payment methods. Connects directly to the CRM.",
     whyNot:
-      "Why not QuickBooks or FreshBooks? We needed invoicing that could be triggered automatically by the AI agent. Invoice Ninja has a full API. It does exactly that.",
+      "Why not QuickBooks or FreshBooks? We needed invoicing that could be triggered automatically by the AI agent. Ours has a full API and does exactly that.",
     cost: "$0/mo (self-hosted) · Optional $40/yr to remove branding",
     cloud: "$30-80/mo",
   },
   {
-    name: "Nextcloud",
-    category: "File Storage",
+    name: "File Storage",
+    category: "Documents & files",
     description:
-      "Your team's shared drive. Job documents, contracts, permits, photos - all stored on your hardware, accessible from anywhere via Tailscale.",
+      "Your team's shared drive. Job documents, contracts, permits, photos - all stored on your hardware, accessible from anywhere via Remote Access.",
     whyNot:
       "Why not Google Drive or Dropbox? You own the storage. No per-seat fees, no storage limits beyond your drive size.",
     cost: "$0/mo",
     cloud: "$10-25/mo per user",
   },
   {
-    name: "Immich",
-    category: "Photo Management",
+    name: "Photos",
+    category: "Job photos",
     description:
       "Before/after job photos organized by job automatically. Techs upload from the field, photos are tagged and ready for invoices, reviews, and your portfolio.",
     whyNot:
-      "Why not Google Photos? Google Photos has no job-based organization and can't hook into your CRM. Immich does both.",
+      "Why not Google Photos? Google Photos has no job-based organization and can't hook into your CRM. Ours does both.",
     cost: "$0/mo (voluntary $99 one-time support payment optional)",
     cloud: "Part of a $30-80/mo field service bundle",
   },
   {
-    name: "Retell AI",
-    category: "Voice AI",
+    name: "Voice AI",
+    category: "AI phone agent",
     description:
       "Answers your phones 24/7 with a live-sounding AI agent. Knows your services, your coverage area, your availability. Creates CRM records from every call automatically.",
     whyNot:
-      "Why Retell and not a different voice AI? Best-in-class latency for voice. MCP tool integration means it can look up real data from your CRM during the call.",
+      "Why ours and not a different voice AI? Best-in-class latency for voice. MCP tool integration means it can look up real data from your CRM during the call.",
     cost: "Usage-based ~$30-80/mo (your account, you control it)",
     cloud: "Answering service $200-500/mo",
   },
   {
-    name: "NemoClaw + OpenRouter",
-    category: "AI Agent Brain",
+    name: "AI Agent + AI Routing",
+    category: "AI brain",
     description:
       "The reasoning layer behind every automation. Reads context, decides what action to take, writes the messages, generates quotes, and dispatches jobs.",
     whyNot:
-      "Why OpenRouter? Routes to the best available model for each task. If one model goes down or gets expensive, we route around it. You're never locked into one AI provider.",
+      "Why AI routing? It routes to the best available model for each task. If one model goes down or gets expensive, we route around it. You're never locked into one AI provider.",
     cost: "Usage-based ~$10-20/mo (your account)",
     cloud: "You can't buy this as a product anywhere else.",
   },
   {
-    name: "Twilio",
-    category: "SMS",
+    name: "SMS",
+    category: "Text messaging",
     description:
       "Sends automated texts to customers - job confirmations, review requests, appointment reminders, and status updates.",
     whyNot:
-      "Note: Twilio A2P registration takes 6-8 weeks. We file this on day one.",
+      "Note: A2P registration takes 6-8 weeks. We file this on day one.",
     cost: "~$10-30/mo (your account)",
     cloud: "Included in $200-700/mo field service bundles",
   },
   {
-    name: "Discord + Telegram",
-    category: "Field Communication",
+    name: "Discord + Mobile Briefings",
+    category: "Team communication",
     description:
-      "Discord is your internal ops hub - job commands, field photo uploads, quote approvals, and crew coordination all run here. Telegram delivers your daily morning briefing to your phone.",
+      "Discord is your internal ops hub - job commands, field photo uploads, quote approvals, and crew coordination all run here. Mobile briefings deliver your daily morning summary to your phone.",
     whyNot:
       "Why Discord? Every trades contractor already uses it or can learn it in 10 minutes. It runs on every device, works offline for reading, and has a full bot API.",
     cost: "$0/mo",
     cloud: "Slack $7-15/mo per user",
   },
   {
-    name: "Tailscale",
-    category: "Remote Access",
+    name: "Remote Access",
+    category: "Secure remote access",
     description:
       "Gives you and your team secure access to the box from anywhere. No VPN setup, no port forwarding. Works on any device.",
     whyNot: "",
@@ -104,10 +104,10 @@ const tools = [
     cloud: "N/A - most cloud software doesn't need this",
   },
   {
-    name: "Cloudflare Tunnel",
-    category: "Public Routing",
+    name: "Public Routing",
+    category: "Secure public routing",
     description:
-      "Exposes your box to the internet securely - no static IP, no VPS required. Retell AI webhooks, contact forms, and public APIs all route through here.",
+      "Exposes your box to the internet securely - no static IP, no VPS required. Voice AI webhooks, contact forms, and public APIs all route through here.",
     whyNot: "",
     cost: "$0/mo",
     cloud: "VPS hosting $5-20/mo",
@@ -125,7 +125,7 @@ const ownershipCards = [
   },
   {
     title: "You own every account.",
-    body: "Retell, Twilio, OpenRouter - you sign up directly. If you ever stop working with us, everything keeps running.",
+    body: "Voice AI, SMS, AI Routing - you sign up directly. If you ever stop working with us, everything keeps running.",
   },
 ];
 
@@ -173,18 +173,18 @@ const Stack = () => (
 
         {(() => {
           const rows: Array<[string, string | null, string, boolean]> = [
-            ["Voice AI", "$200–500", "Retell · usage", false],
-            ["SMS", "$50–150", "Twilio · usage", false],
-            ["CRM", "$50–500", "Free · Twenty CRM", true],
-            ["Invoicing + pay", "$30–80", "Free · Invoice Ninja", true],
-            ["File storage", "$10–25", "Free · Nextcloud", true],
-            ["Jobsite photos", "$15–45", "Free · Immich", true],
+            ["Voice AI", "$200–500", "Voice AI · usage", false],
+            ["SMS", "$50–150", "SMS · usage", false],
+            ["CRM", "$50–500", "Free · CRM", true],
+            ["Invoicing + pay", "$30–80", "Free · Invoices", true],
+            ["File storage", "$10–25", "Free · File Storage", true],
+            ["Jobsite photos", "$15–45", "Free · Photos", true],
             ["Team chat", "$7–15", "Free · Discord", true],
             ["Pricebook", "$50–150", "Free · Built-in", true],
             ["Dispatch + cal", "$200+", "Free · Field-Ops", true],
             ["Receipt scan", "$5–20", "Gemini · pennies", false],
             ["AI assistant", null, "Jarvis · usage", false],
-            ["Remote access", "$0–20", "Free · Tailscale", true],
+            ["Remote access", "$0–20", "Free · Remote Access", true],
           ];
           return (
             <div className="rounded-2xl overflow-hidden bg-card border border-border shadow-elevated max-w-5xl mx-auto">
@@ -312,7 +312,7 @@ const Stack = () => (
             <p className="text-4xl md:text-5xl font-extrabold text-primary mb-2">
               ~$50-130
             </p>
-            <p className="text-muted-foreground text-base">/mo - Retell + Twilio + OpenRouter only</p>
+            <p className="text-muted-foreground text-base">/mo - Voice AI + SMS + AI Routing only</p>
           </div>
           <div className="rounded-xl border border-border bg-card p-8 text-center">
             <p className="text-sm text-muted-foreground uppercase tracking-wider font-medium mb-3">

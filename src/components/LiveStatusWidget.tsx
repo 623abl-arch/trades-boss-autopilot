@@ -3,13 +3,13 @@ import { Activity, ChevronDown, ChevronUp } from "lucide-react";
 import { cn } from "@/lib/utils";
 
 const SERVICES = [
-  "Cloudflare Tunnel",
-  "Tailscale VPN",
-  "Twenty CRM",
-  "Invoice Ninja",
-  "Nextcloud",
-  "Retell Voice AI",
-  "Nemotron AI Brain",
+  "Public Routing",
+  "Remote Access VPN",
+  "CRM",
+  "Invoices",
+  "File Storage",
+  "Voice AI",
+  "AI Engine",
   "Discord Bot (Jarvis)",
   "Mini PC node",
 ];

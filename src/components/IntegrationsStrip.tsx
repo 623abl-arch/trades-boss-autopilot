@@ -4,16 +4,16 @@ import {
 } from "lucide-react";
 
 const tools = [
-  { name: "Twenty CRM", icon: Database },
-  { name: "Invoice Ninja", icon: FileText },
-  { name: "Nextcloud", icon: Cloud },
-  { name: "Immich", icon: Image },
+  { name: "CRM", icon: Database },
+  { name: "Invoices", icon: FileText },
+  { name: "File Storage", icon: Cloud },
+  { name: "Photos", icon: Image },
   { name: "Discord", icon: MessageSquare },
-  { name: "n8n", icon: Workflow },
-  { name: "Ollama", icon: Brain },
-  { name: "Whisper", icon: Mic },
-  { name: "ElevenLabs", icon: Volume2 },
-  { name: "Telegram", icon: Send },
+  { name: "Automation", icon: Workflow },
+  { name: "Local AI", icon: Brain },
+  { name: "Speech-to-Text", icon: Mic },
+  { name: "Voice Synthesis", icon: Volume2 },
+  { name: "Mobile Briefings", icon: Send },
 ];
 
 const Pill = ({ tool }: { tool: (typeof tools)[number] }) => {

@@ -11,17 +11,17 @@ type Node = {
 };
 
 const inputs: Node[] = [
-  { id: "phone", label: "Phone calls", sub: "Retell AI", icon: <Phone className="w-4 h-4" />, color: "text-emerald-500", y: 12 },
-  { id: "sms",   label: "SMS",         sub: "Twilio",    icon: <MessageSquare className="w-4 h-4" />, color: "text-sky-500",     y: 38 },
+  { id: "phone", label: "Phone calls", sub: "Voice AI", icon: <Phone className="w-4 h-4" />, color: "text-emerald-500", y: 12 },
+  { id: "sms",   label: "SMS",         sub: "SMS",    icon: <MessageSquare className="w-4 h-4" />, color: "text-sky-500",     y: 38 },
   { id: "email", label: "Email",       sub: "IMAP",      icon: <Mail className="w-4 h-4" />,         color: "text-violet-500",   y: 62 },
   { id: "web",   label: "Web forms",   sub: "Site",      icon: <Globe className="w-4 h-4" />,        color: "text-amber-500",    y: 88 },
 ];
 
 const outputs: Node[] = [
-  { id: "crm",     label: "Twenty CRM",     sub: "Contacts & jobs",  icon: <Database className="w-4 h-4" />,  color: "text-foreground", y: 12 },
-  { id: "invoice", label: "Invoice Ninja",  sub: "Quotes & invoices", icon: <FileText className="w-4 h-4" />, color: "text-blue-500",    y: 38 },
-  { id: "photos",  label: "Immich",         sub: "Job site photos",   icon: <ImageIcon className="w-4 h-4" />, color: "text-orange-500",  y: 62 },
-  { id: "files",   label: "Nextcloud",      sub: "Files & docs",      icon: <Cloud className="w-4 h-4" />,     color: "text-cyan-500",    y: 88 },
+  { id: "crm",     label: "CRM",     sub: "Contacts & jobs",  icon: <Database className="w-4 h-4" />,  color: "text-foreground", y: 12 },
+  { id: "invoice", label: "Invoices",  sub: "Quotes & invoices", icon: <FileText className="w-4 h-4" />, color: "text-blue-500",    y: 38 },
+  { id: "photos",  label: "Photos",         sub: "Job site photos",   icon: <ImageIcon className="w-4 h-4" />, color: "text-orange-500",  y: 62 },
+  { id: "files",   label: "File Storage",      sub: "Files & docs",      icon: <Cloud className="w-4 h-4" />,     color: "text-cyan-500",    y: 88 },
 ];
 
 const StackFlow = () => {
@@ -176,9 +176,9 @@ const StackFlow = () => {
           {/* Bottom rail: edge + security stack */}
           <div className="relative mt-8 grid grid-cols-2 md:grid-cols-4 gap-3">
             {[
-              { label: "Cloudflare Tunnel", sub: "Zero open ports", icon: <Shield className="w-4 h-4" />, color: "text-amber-500" },
-              { label: "Tailscale", sub: "Private mesh VPN", icon: <Globe className="w-4 h-4" />, color: "text-violet-500" },
-              { label: "Local LLM", sub: "Ollama + Whisper", icon: <Cpu className="w-4 h-4" />, color: "text-emerald-500" },
+              { label: "Public Routing", sub: "Zero open ports", icon: <Shield className="w-4 h-4" />, color: "text-amber-500" },
+              { label: "Remote Access", sub: "Private mesh VPN", icon: <Globe className="w-4 h-4" />, color: "text-violet-500" },
+              { label: "Local LLM", sub: "Local AI + Speech-to-Text", icon: <Cpu className="w-4 h-4" />, color: "text-emerald-500" },
               { label: "Encrypted backups", sub: "Off-site nightly", icon: <Database className="w-4 h-4" />, color: "text-sky-500" },
             ].map((t) => (
               <div key={t.label} className="flex items-center gap-3 rounded-xl border border-border bg-card px-3 py-2.5 shadow-xs">

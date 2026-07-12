@@ -32,7 +32,7 @@ const ledger = [
     n: "01",
     kind: "Dispatch",
     head: "A receptionist that never sleeps, never quits.",
-    dek: "Retell AI fields every call, books the job, drops it on the board before the phone stops ringing.",
+    dek: "Voice AI fields every call, books the job, drops it on the board before the phone stops ringing.",
   },
   {
     n: "02",
@@ -116,17 +116,17 @@ const IndexV2 = () => {
             >
               <p>
                 For two decades the trades have been handed the same bargain: rent a stack of subscriptions
-                — Jobber for scheduling, ServiceTitan for dispatch, CompanyCam for photos, Twilio for SMS —
+                — Jobber for scheduling, ServiceTitan for dispatch, CompanyCam for photos, SMS for messaging —
                 and let your customer list, your pricebook, and your job history live on someone else's server.
               </p>
               <p>
-                MEP Claw is the counter-offer. Twenty CRM, Invoice Ninja, Nextcloud, Immich, a Retell voice
+                MEP Claw is the counter-offer. CRM, Invoices, File Storage, Photos, a voice AI
                 agent and a Discord-based field interface, all pre-installed on a single Mini PC on your
-                desk. Reachable from anywhere via Tailscale. Backed up to a NAS in the closet. Replaceable
+                desk. Reachable from anywhere via Remote Access. Backed up to a NAS in the closet. Replaceable
                 at any time because every piece is open source.
               </p>
               <p>
-                The total monthly cost — Twilio, the VPS, optional AI tokens — clears <em>under fifty
+                The total monthly cost — SMS, the VPS, optional AI tokens — clears <em>under fifty
                 dollars</em>. The hardware is purchased once. The data, every byte, never leaves the shop.
               </p>
             </div>

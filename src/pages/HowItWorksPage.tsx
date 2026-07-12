@@ -11,10 +11,10 @@ const timeline = [
     title: "Foundation",
     items: [
       "Hardware ships or is configured on-site",
-      "Docker stack deployed: Twenty CRM, Invoice Ninja, Nextcloud",
-      "Cloudflare Tunnel set up - no VPS needed, your box is live on the internet",
+      "Docker stack deployed: CRM, Invoices, File Storage",
+      "Public Routing set up - no VPS needed, your box is live on the internet",
       "Discord server built: channels for commands, logs, leads, field photos, daily summary",
-      "Twilio A2P registration filed (starts the 6-8 week clock - we do this day one)",
+      "SMS A2P registration filed (starts the 6-8 week clock - we do this day one)",
     ],
   },
   {
@@ -30,10 +30,10 @@ const timeline = [
     week: "Week 3",
     title: "The Agent Goes Live",
     items: [
-      "Retell AI voice agent configured with your services, coverage area, and tone",
+      "Voice agent configured with your services, coverage area, and tone",
       "Discord bot customized with your team roles and job types",
       "Quote engine tested: AI Quick Quote, pricebook lookup, and manual override all working",
-      "Invoice Ninja templates branded to your company",
+      "Invoice templates branded to your company",
     ],
   },
   {
@@ -49,8 +49,8 @@ const timeline = [
     week: "Week 6-8",
     title: "SMS Goes Live",
     items: [
-      "Twilio A2P approved - automated SMS to customers now active",
-      "Review follow-up texts, job status updates, and morning briefings via Telegram enabled",
+      "SMS A2P approved - automated SMS to customers now active",
+      "Review follow-up texts, job status updates, and morning briefings via mobile push enabled",
     ],
   },
 ];
@@ -60,23 +60,23 @@ const onboardingItems = [
   "Map your service area and job types",
   "Review your existing pricebook or build one together",
   "Confirm hardware tier that fits your team size",
-  "Set up your Cloudflare Tunnel and domain routing live on the call",
+  "Set up your public routing and domain routing live on the call",
   "Answer every question before a single dollar ships",
 ];
 
 const monthlyCosts = [
   {
-    service: "Retell AI",
+    service: "Voice AI",
     what: "Answers your phones with a live AI voice agent",
     cost: "~$30-80/mo depending on call volume",
   },
   {
-    service: "Twilio",
+    service: "SMS",
     what: "Sends and receives SMS to your customers",
     cost: "~$10-30/mo",
   },
   {
-    service: "OpenRouter",
+    service: "AI Routing",
     what: "Powers the AI brain and quote engine",
     cost: "~$10-20/mo",
   },
@@ -192,7 +192,7 @@ const HowItWorksPage = () => (
           </table>
         </div>
         <p className="text-muted-foreground text-base text-center max-w-3xl mx-auto leading-relaxed">
-          Everything else - CRM, invoicing, file storage, photo management, Discord and Telegram bots - runs on your hardware.{" "}
+          Everything else - CRM, invoicing, file storage, photo management, Discord and mobile briefing bots - runs on your hardware.{" "}
           <span className="text-foreground font-semibold">Zero subscription cost.</span>
         </p>
       </div>
