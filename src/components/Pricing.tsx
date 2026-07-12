@@ -17,36 +17,26 @@ const tiers = [
   {
     name: "Core Node",
     hw: "Mac Mini M4",
-    techs: "Up to 20 techs",
+    techs: "Up to 15 techs",
     price: "$11,000",
     recommended: true,
     img: hwCore,
     perks: ["Everything in Starter", "Faster local AI inference", "Priority support"],
   },
   {
-    name: "Command Node",
-    hw: "Mac Studio M4",
-    techs: "10-30 techs",
-    price: "$14,000",
-    recommended: false,
-    img: hwCommand,
-    perks: ["Everything in Core", "Dedicated AI brain", "Multi-location ready"],
-  },
-  {
     name: "Fleet Node",
-    hw: "NVIDIA DGX Spark",
-    techs: "30+ techs",
-    price: "$21,000",
+    hw: "Mac Studio / NVIDIA DGX Spark",
+    techs: "15+ techs",
+    price: "Requires Consulting",
     recommended: false,
     img: hwFleet,
-    perks: ["Everything in Command", "Custom config", "White-glove deployment"],
+    perks: ["Everything in Core", "Dedicated AI brain", "White-glove deployment"],
   },
 ];
 
 const tints = [
   "from-sky-200/70 to-emerald-100/40",
   "from-amber-200/70 to-orange-200/50",
-  "from-rose-200/70 to-fuchsia-100/40",
   "from-emerald-200/70 to-sky-200/40",
 ];
 
@@ -67,7 +57,7 @@ const Pricing = () => (
         </p>
       </div>
 
-      <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+      <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
         {tiers.map((t, i) => (
           <div
             key={t.name}
