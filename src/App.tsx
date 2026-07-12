@@ -13,6 +13,7 @@ import Faq from "./pages/Faq.tsx";
 import WhatIsMepClaw from "./pages/WhatIsMepClaw.tsx";
 import PricingPage from "./pages/PricingPage.tsx";
 import VoiceAi from "./pages/features/VoiceAi.tsx";
+import Dashboard from "./pages/features/Dashboard.tsx";
 import Quotes from "./pages/features/Quotes.tsx";
 import Crm from "./pages/features/Crm.tsx";
 import FieldPhotos from "./pages/features/FieldPhotos.tsx";
@@ -41,6 +42,7 @@ const App = () => (
             <Route path="/how-it-works" element={<HowItWorksPage />} />
             <Route path="/about" element={<AboutMepClaw />} />
             <Route path="/features/voice-ai" element={<VoiceAi />} />
+            <Route path="/features/dashboard" element={<Dashboard />} />
             <Route path="/features/quotes" element={<Quotes />} />
             <Route path="/features/crm" element={<Crm />} />
             <Route path="/features/field-photos" element={<FieldPhotos />} />

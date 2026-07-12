@@ -30,7 +30,6 @@ const categories = [
 ] as const;
 
 const flatLinks = [
-  { href: "/about", label: "About" },
   { href: "/faq", label: "FAQ" },
   { href: "/#pricing", label: "Pricing" },
 ];
