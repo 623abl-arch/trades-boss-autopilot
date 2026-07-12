@@ -61,10 +61,10 @@ function TerminalAnimation() {
 }
 
 const connectionLines = [
-  { service: "TWENTY CRM", status: "CONNECTED" },
-  { service: "INVOICE NINJA", status: "CONNECTED" },
-  { service: "RETELL AI VOICE", status: "CONNECTED" },
-  { service: "NEXTCLOUD FILES", status: "CONNECTED" },
+  { service: "CRM", status: "CONNECTED" },
+  { service: "INVOICES", status: "CONNECTED" },
+  { service: "VOICE AI", status: "CONNECTED" },
+  { service: "FILE STORAGE", status: "CONNECTED" },
   { service: "DISCORD BOT", status: "LIVE" },
   { service: "AGENT READY.", status: "", final: true },
 ];
