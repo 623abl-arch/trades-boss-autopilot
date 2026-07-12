@@ -3,11 +3,8 @@ import { Hash, CheckCircle2, Truck, Calendar, Receipt, Clock } from "lucide-reac
 
 const STAGES = {
   MESSAGE: 900,
-  BUTTONS: 600,
-  TAP_DISPATCH: 1200,
-  TAP_BOOK: 1100,
-  TAP_RECEIPT: 1100,
-  TAP_CLOCK: 1100,
+  BUTTONS: 500,
+  TAP: 1300,
   RESET: 2000,
 } as const;
 
@@ -30,30 +27,22 @@ const DispatchButtonsDemo = () => {
         setStage(0);
         setTapped(null);
         setCompleted([]);
-        await new Promise((r) => setTimeout(r, STAGES.MESSAGE));
+        await sleep(STAGES.MESSAGE);
         setStage(1);
-        await new Promise((r) => setTimeout(r, STAGES.BUTTONS));
-        setStage(2);
-        await tap("dispatch");
-        setStage(3);
-        await tap("book");
-        setStage(4);
-        await tap("receipt");
-        setStage(5);
-        await tap("clock");
-        setStage(6);
-        await new Promise((r) => setTimeout(r, STAGES.RESET));
+        await sleep(STAGES.BUTTONS);
+        for (const action of actions) {
+          setStage((s) => s + 1);
+          setTapped(action.id);
+          await sleep(220);
+          setCompleted((prev) => [...prev, action.id]);
+          setTapped(null);
+          await sleep(STAGES.TAP - 220);
+        }
+        await sleep(STAGES.RESET);
       }
     };
 
-    const tap = async (id: string) => {
-      setTapped(id);
-      await new Promise((r) => setTimeout(r, 220));
-      setCompleted((prev) => [...prev, id]);
-      setTapped(null);
-      await new Promise((r) => setTimeout(r, STAGES.TAP_DISPATCH - 220));
-    };
-
+    const sleep = (ms: number) => new Promise((r) => setTimeout(r, ms));
     run();
     return () => {
       cancelled = true;
@@ -69,8 +58,8 @@ const DispatchButtonsDemo = () => {
         <span className="ml-auto text-[10px] uppercase tracking-wider text-white/40">live</span>
       </div>
 
-      <div className="relative p-4 md:p-5 min-h-[520px] bg-[#313338] flex flex-col justify-between">
-        <div className="space-y-4">
+      <div className="relative p-4 md:p-5 min-h-[520px] bg-[#313338] flex flex-col justify-center">
+        <div className="space-y-5">
           {/* Dispatcher message */}
           <div
             className={`flex gap-3 transition-all duration-500 ${
@@ -101,16 +90,16 @@ const DispatchButtonsDemo = () => {
                 return (
                   <button
                     key={action.id}
-                    className={`relative flex items-center gap-3 rounded-lg px-4 py-3 text-left transition-all duration-200 ${
+                    className={`relative flex flex-col items-start gap-2 rounded-xl px-4 py-4 text-left transition-all duration-200 ${
                       isTapped
-                        ? "scale-[0.96] ring-2 ring-white/40"
-                        : "hover:bg-white/5"
+                        ? "scale-[0.96] ring-2 ring-white/40 bg-[#2b2d31]"
+                        : "hover:bg-[#2b2d31]"
                     } ${
-                      isDone ? "bg-white/10" : "bg-[#2b2d31]"
+                      isDone ? "bg-white/10" : "bg-[#2b2d31]/60"
                     }`}
                   >
                     <div
-                      className={`h-8 w-8 rounded-lg ${action.color} flex items-center justify-center shrink-0 transition-transform duration-200 ${
+                      className={`h-9 w-9 rounded-lg ${action.color} flex items-center justify-center shrink-0 transition-transform duration-200 ${
                         isTapped ? "scale-90" : ""
                       }`}
                     >
@@ -135,16 +124,15 @@ const DispatchButtonsDemo = () => {
           )}
 
           {/* Confirmation messages */}
-          {stage >= 2 && (
-            <div className="space-y-2">
-              {completed.map((id, i) => {
+          {stage >= 2 && completed.length > 0 && (
+            <div className="space-y-2 rounded-lg bg-[#2b2d31]/50 p-3 animate-fade-in">
+              {completed.map((id) => {
                 const action = actions.find((a) => a.id === id);
                 if (!action) return null;
                 return (
                   <div
                     key={id}
-                    className="flex items-center gap-2 text-[11px] text-white/70 animate-fade-in"
-                    style={{ animationDelay: `${i * 80}ms` }}
+                    className="flex items-center gap-2 text-[11px] text-white/70"
                   >
                     <CheckCircle2 className="w-3.5 h-3.5 text-[hsl(var(--accent))]" />
                     <span>
@@ -155,16 +143,16 @@ const DispatchButtonsDemo = () => {
               })}
             </div>
           )}
-        </div>
 
-        {/* Bottom status line */}
-        <div className="mt-4 pt-3 border-t border-white/5">
-          <div className="flex items-center justify-between text-[10px] text-white/40">
-            <span>4 workflows available</span>
-            <span className="flex items-center gap-1.5">
-              <span className="h-1.5 w-1.5 rounded-full bg-[hsl(var(--accent))]" />
-              {completed.length} completed
-            </span>
+          {/* Bottom status line */}
+          <div className="pt-4 border-t border-white/5">
+            <div className="flex items-center justify-between text-[10px] text-white/40">
+              <span>4 workflows available</span>
+              <span className="flex items-center gap-1.5">
+                <span className="h-1.5 w-1.5 rounded-full bg-[hsl(var(--accent))]" />
+                {completed.length} completed
+              </span>
+            </div>
           </div>
         </div>
       </div>
