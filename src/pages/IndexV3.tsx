@@ -14,17 +14,17 @@ import { ArrowRight, Wrench, Cpu, Radio, FileText } from "lucide-react";
 
 const protocols = [
   { n: "00", t: "07:12", title: "Morning digest fires", body: "Each tech gets today's jobs, addresses, and weather risk as a single Discord card." },
-  { n: "01", t: "08:04", title: "Voice AI books a job", body: "Retell takes a call cold, qualifies, slots a 4:30 install, drops it on the board." },
+  { n: "01", t: "08:04", title: "Voice AI books a job", body: "Voice AI takes a call cold, qualifies, slots a 4:30 install, drops it on the board." },
   { n: "02", t: "11:46", title: "Quote in 9 seconds", body: "Tech types '50gal heater + permit'. Pricebook builds it. Customer signs from a text link." },
   { n: "03", t: "14:21", title: "Receipt → journal entry", body: "Photo of a supply-house slip. Gemini lifts vendor, total, tax. Posts to the job. Bookkeeping is done." },
   { n: "04", t: "17:55", title: "Late-warning catches a no-show", body: "A tech hasn't clocked out 25 min past ETA. The owner is paged before the customer calls." },
 ];
 
 const shopfloor = [
-  { icon: Cpu, k: "01", h: "One Mini PC", d: "Runs the entire stack. Lives on your desk. Reachable via Tailscale from anywhere." },
-  { icon: Wrench, k: "02", h: "Twenty CRM", d: "Customers, jobs, pricebook — 2,300+ line items, indexed and chat-searchable." },
+  { icon: Cpu, k: "01", h: "One Mini PC", d: "Runs the entire stack. Lives on your desk. Reachable via Remote Access from anywhere." },
+  { icon: Wrench, k: "02", h: "CRM", d: "Customers, jobs, pricebook — 2,300+ line items, indexed and chat-searchable." },
   { icon: Radio, k: "03", h: "Discord ops", d: "Your field interface. Quotes, photos, timesheets, receipts — all in chat." },
-  { icon: FileText, k: "04", h: "Invoice Ninja", d: "Quotes, invoices, Stripe, ACH, Apple Pay. Customer portal at your domain." },
+  { icon: FileText, k: "04", h: "Invoices", d: "Quotes, invoices, Stripe, ACH, Apple Pay. Customer portal at your domain." },
 ];
 
 const operators = [
@@ -94,12 +94,12 @@ const IndexV3 = () => {
               </p>
               <dl className="text-sm divide-y divide-foreground/15">
                 {[
-                  ["Stack", "Twenty CRM · Invoice Ninja · Nextcloud · Immich"],
-                  ["Voice", "Retell AI receptionist (24/7)"],
+                  ["Stack", "CRM · Invoices · File Storage · Photos"],
+                  ["Voice", "Voice AI receptionist (24/7)"],
                   ["Field UI", "Discord, with bot commands"],
-                  ["Hosting", "Mini PC + Tailscale + Cloudflare"],
+                  ["Hosting", "Mini PC + Remote Access + Cloudflare"],
                   ["Backup", "Nightly to local NAS (+$600)"],
-                  ["Monthly cost", "≈ $20 stack + $15–30 Twilio"],
+                  ["Monthly cost", "≈ $20 stack + $15–30 SMS"],
                 ].map(([k, v]) => (
                   <div key={k} className="py-3 flex gap-4">
                     <dt className="w-28 uppercase tracking-[0.18em] text-[11px] font-bold text-muted-foreground">

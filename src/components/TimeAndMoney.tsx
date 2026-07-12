@@ -31,7 +31,7 @@ const TimeAndMoney = () => (
             ["Jobber (5 users)", "$349/mo"],
             ["CompanyCam", "$59/mo"],
             ["ServiceTitan add-ons", "$99/mo"],
-            ["Twilio SMS", "$30/mo"],
+            ["SMS SMS", "$30/mo"],
             ["Cloud storage", "$25/mo"],
           ].map(([name, price]) => (
             <div key={name} className="flex justify-between items-baseline py-2.5 border-b border-border last:border-b-0">
@@ -50,11 +50,11 @@ const TimeAndMoney = () => (
             Full stack on your hardware
           </div>
           {[
-            ["Twenty CRM", "$0/mo"],
-            ["Immich photos", "$0/mo"],
-            ["Twilio SMS", "~$10/mo"],
-            ["Retell voice AI", "included"],
-            ["Nextcloud storage", "$0/mo"],
+            ["CRM", "$0/mo"],
+            ["Photos photos", "$0/mo"],
+            ["SMS SMS", "~$10/mo"],
+            ["Voice AI AI", "included"],
+            ["File Storage storage", "$0/mo"],
           ].map(([name, price]) => (
             <div key={name} className="flex justify-between items-baseline py-2.5 border-b border-border last:border-b-0">
               <span className="text-sm text-muted-foreground">{name}</span>

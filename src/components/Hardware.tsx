@@ -5,7 +5,7 @@ const specs = [
   { icon: Cpu, label: "CPU", value: "Modern x86 / Apple Silicon" },
   { icon: HardDrive, label: "Storage", value: "1-4 TB NVMe SSD" },
   { icon: Zap, label: "Power", value: "Sips ~30W idle" },
-  { icon: Network, label: "Network", value: "Cloudflare Tunnel + Tailscale" },
+  { icon: Network, label: "Network", value: "Public Routing + Remote Access" },
 ];
 
 const Hardware = () => (
@@ -18,7 +18,7 @@ const Hardware = () => (
             One Mini PC. Sits on your desk. Runs the whole business.
           </h2>
           <p className="text-lg text-muted-foreground leading-relaxed mb-5">
-            Purpose-built hardware - no Apple premium tax. We configure it for your trade, ship it to your door, and you plug it in. A Cloudflare Tunnel auto-connects it so your team and Voice AI can reach it from anywhere - securely, without opening a single port.
+            Purpose-built hardware - no Apple premium tax. We configure it for your trade, ship it to your door, and you plug it in. A Public Routing auto-connects it so your team and Voice AI can reach it from anywhere - securely, without opening a single port.
           </p>
           <p className="text-lg text-muted-foreground leading-relaxed mb-10">
             CRM, invoicing, voice AI, Discord bot, file storage, photos, AI brain - all on one box that costs less than two months of ServiceTitan.

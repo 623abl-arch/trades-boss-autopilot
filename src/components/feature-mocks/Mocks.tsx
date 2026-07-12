@@ -274,7 +274,7 @@ export const SavingsMock = () => (
       </div>
     </div>
     <div className="text-3xl font-bold text-foreground mb-1">$4,860</div>
-    <div className="text-xs text-muted-foreground mb-4">vs Jobber + Twilio</div>
+    <div className="text-xs text-muted-foreground mb-4">vs Jobber + SMS</div>
     <div className="h-1.5 rounded-full bg-surface overflow-hidden">
       <div className="h-full w-[78%] rounded-full bg-emerald-500" />
     </div>

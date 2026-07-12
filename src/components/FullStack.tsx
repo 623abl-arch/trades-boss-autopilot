@@ -4,59 +4,59 @@ import { useState } from "react";
 const stackRows = [
   {
     layer: "CRM + Field Ops",
-    tool: "Twenty CRM",
+    tool: "CRM",
     note: "Open source CRM. 890+ clients on day one.",
     detail:
-      "Self-hosted Twenty CRM holds every customer, lead, job, and visit on your own box. No per-seat fees, no data lock-in - your entire pipeline lives inside your private network and is queryable by the AI agent in real time.",
+      "Self-hosted CRM holds every customer, lead, job, and visit on your own box. No per-seat fees, no data lock-in - your entire pipeline lives inside your private network and is queryable by the AI agent in real time.",
   },
   {
     layer: "Invoicing + Quotes",
-    tool: "Invoice Ninja",
+    tool: "Invoices",
     note: "Quote → invoice → payment, all branded.",
     detail:
-      "Send branded quotes, convert to invoices, accept Stripe/ACH, and reconcile - all triggered automatically from a Discord command or a Retell call outcome. Full API means the AI can do it without a human clicking.",
+      "Send branded quotes, convert to invoices, accept Stripe/ACH, and reconcile - all triggered automatically from a Discord command or a Voice AI call outcome. Full API means the AI can do it without a human clicking.",
   },
   {
     layer: "File Storage",
-    tool: "Nextcloud",
+    tool: "File Storage",
     note: "Permits, contracts, photos. Your private cloud.",
     detail:
-      "A private drive for the whole team. Permits, signed contracts, manuals, and SOPs live on your hardware and are accessible from anywhere via Tailscale. No per-user storage fees ever.",
+      "A private drive for the whole team. Permits, signed contracts, manuals, and SOPs live on your hardware and are accessible from anywhere via Remote Access. No per-user storage fees ever.",
   },
   {
     layer: "Photo Management",
-    tool: "Immich",
+    tool: "Photos",
     note: "Geotagged jobsite photos on a map.",
     detail:
-      "Field photos uploaded in Discord get routed to Immich, auto-organized by job site address, and tagged for quick recall during invoicing, warranty work, or marketing.",
+      "Field photos uploaded in Discord get routed to Photos, auto-organized by job site address, and tagged for quick recall during invoicing, warranty work, or marketing.",
   },
   {
     layer: "Voice AI",
-    tool: "Retell AI",
+    tool: "Voice AI",
     note: "24/7 receptionist. Books visits in real time.",
     detail:
       "Best-in-class latency voice AI answers your phones, knows your services, checks live availability against the CRM, and books the visit before hanging up. Every call creates a CRM record automatically.",
   },
   {
     layer: "AI Agent Brain",
-    tool: "NemoClaw + Nemotron",
+    tool: "AI Agent + AI Engine",
     note: "Local LLM. Searches your pricebook.",
     detail:
-      "The reasoning layer that decides what to do with every inbound signal - reads context, drafts messages, builds quotes, dispatches techs. Routes between local Nemotron and cloud models via OpenRouter for the best price/quality per task.",
+      "The reasoning layer that decides what to do with every inbound signal - reads context, drafts messages, builds quotes, dispatches techs. Routes between local AI Engine and cloud models via AI Routing for the best price/quality per task.",
   },
   {
     layer: "SMS",
-    tool: "Twilio",
+    tool: "SMS",
     note: "Inbound + outbound. A2P 10DLC compliant.",
     detail:
-      "Automated confirmations, reminders, review requests, and on-the-way texts - sent on your own Twilio account so you keep the number and the deliverability reputation.",
+      "Automated confirmations, reminders, review requests, and on-the-way texts - sent on your own SMS account so you keep the number and the deliverability reputation.",
   },
   {
     layer: "Field Communication",
-    tool: "Discord + Telegram",
+    tool: "Discord + Mobile Briefings",
     note: "Where your crew already lives.",
     detail:
-      "Discord is the ops hub - channels for new jobs, dispatch, photos, quote approvals. Telegram pushes your morning briefing straight to your phone. Both run free, on every device, and need zero training.",
+      "Discord is the ops hub - channels for new jobs, dispatch, photos, quote approvals. Mobile Briefings pushes your morning briefing straight to your phone. Both run free, on every device, and need zero training.",
   },
 ];
 
@@ -125,7 +125,7 @@ const FullStack = () => {
         </div>
 
         <p className="text-sm text-muted-foreground mt-6">
-          Accessible from anywhere via Tailscale. Secured with Cloudflare Tunnel. Runs on a Mini PC on your desk.
+          Accessible from anywhere via Remote Access. Secured with Public Routing. Runs on a Mini PC on your desk.
         </p>
 
         <div className="mt-10">

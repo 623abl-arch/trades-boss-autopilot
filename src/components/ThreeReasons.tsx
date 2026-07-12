@@ -117,7 +117,7 @@ function ConnectionFeed() {
 }
 
 const timelineEvents = [
-  { time: "6:00 AM", event: "Morning briefing sent via Telegram" },
+  { time: "6:00 AM", event: "Morning briefing sent via Mobile Briefings" },
   { time: "9:15 AM", event: "Inbound call answered by AI" },
   { time: "10:30 AM", event: "Quote sent automatically" },
   { time: "1:00 PM", event: "Jobsite photos geotagged & filed" },
