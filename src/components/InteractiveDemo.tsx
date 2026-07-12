@@ -100,7 +100,7 @@ const DiscordPanel = () => (
 
 const QuotePanel = () => (
   <div key="quote" className="animate-fade-in space-y-3">
-    <div className="text-xs text-muted-foreground mb-2">Invoices webhook received · client approved Quote_Smith.pdf</div>
+    <div className="text-xs text-muted-foreground mb-2">Invoice webhook received · client approved Quote_Smith.pdf</div>
     {[
       { label: "Quote status", value: "✓ Approved" },
       { label: "CRM", value: "Job #2241 → Scheduled" },
