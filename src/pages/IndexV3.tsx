@@ -14,7 +14,7 @@ import { ArrowRight, Wrench, Cpu, Radio, FileText } from "lucide-react";
 
 const protocols = [
   { n: "00", t: "07:12", title: "Morning digest fires", body: "Each tech gets today's jobs, addresses, and weather risk as a single Discord card." },
-  { n: "01", t: "08:04", title: "Voice AI books a job", body: "Voice AI takes a call cold, qualifies, slots a 4:30 install, drops it on the board." },
+  { n: "01", t: "08:04", title: "Voice AI books a job", body: "The voice AI takes a call cold, qualifies, slots a 4:30 install, drops it on the board." },
   { n: "02", t: "11:46", title: "Quote in 9 seconds", body: "Tech types '50gal heater + permit'. Pricebook builds it. Customer signs from a text link." },
   { n: "03", t: "14:21", title: "Receipt → journal entry", body: "Photo of a supply-house slip. Gemini lifts vendor, total, tax. Posts to the job. Bookkeeping is done." },
   { n: "04", t: "17:55", title: "Late-warning catches a no-show", body: "A tech hasn't clocked out 25 min past ETA. The owner is paged before the customer calls." },
