@@ -1,45 +1,25 @@
-# Plan: Dump all site copy to chat
+## Plan: Generate 8 reference look-alike images
 
-## Goal
-Paste all human-readable marketing text from every page of the site into chat, organized with the page name as a header.
+No site changes. Just generate images and paste them back in chat for review.
 
-## Approach
-Use a headless browser (Playwright) against the running local preview to visit each route and extract only the visible text (stripping code, class names, and hidden nodes). This is more accurate than parsing JSX because it captures the same words a visitor sees, in reading order, including text from shared components (Navbar, Footer, CTAs).
+**Source references (4 uploads):**
+1. Before/after living room renovation (wood-paneled → modern bright)
+2. House exterior mid-siding install (Tyvek wrap exposed, new gable addition)
+3. Two-story house with ladders, worker installing/replacing windows
+4. Concrete block house under construction (second-story framing in progress)
 
-## Routes to capture
-Main pages:
-- `/` — Landing (Index)
-- `/what-is-mepclaw`
-- `/about`
-- `/how-it-works`
-- `/pricing`
-- `/faq`
-- `/stack`
-- `/blog` and a sample `/blog/:slug`
+**Output: 2 variations per reference = 8 images total**
 
-Feature pages:
-- `/features/crm`
-- `/features/dashboard`
-- `/features/field-photos`
-- `/features/quotes`
-- `/features/voice-ai`
+For image #1 (before/after): compose as **left = before, right = after** (side-by-side horizontal split), instead of the original top/bottom stack.
 
-Solution pages:
-- `/solutions/discord-bot`
-- `/solutions/discord-overview`
+**Where they'll be saved:** `/mnt/documents/` as JPGs so you can preview/download them directly in chat. Not added to the project.
 
-## Output format
-Pasted directly in chat as plain text:
+**Naming:**
+- `renovation-beforeafter-1.jpg`, `renovation-beforeafter-2.jpg`
+- `siding-wrap-1.jpg`, `siding-wrap-2.jpg`
+- `window-install-1.jpg`, `window-install-2.jpg`
+- `block-construction-1.jpg`, `block-construction-2.jpg`
 
-```
-=== PAGE: Landing (/) ===
-<all visible copy in reading order>
+**Model:** standard-tier realistic photography, similar composition/subject to each reference but not copies (different homes, angles, lighting variations).
 
-=== PAGE: What is MEP Claw (/what-is-mepclaw) ===
-...
-```
-
-## Notes
-- No file changes. Read-only extraction.
-- If total output exceeds a single message, I'll split across 2–3 messages grouped by section (main pages, feature pages, solution pages, blog).
-- I'll skip duplicate navbar/footer text after the first page and note "(shared nav/footer omitted)" to keep it readable.
+Approve and I'll generate all 8 in parallel.
