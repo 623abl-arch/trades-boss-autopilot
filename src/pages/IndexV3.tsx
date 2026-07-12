@@ -97,7 +97,7 @@ const IndexV3 = () => {
                   ["Stack", "CRM · Invoices · File Storage · Photos"],
                   ["Voice", "Voice AI receptionist (24/7)"],
                   ["Field UI", "Discord, with bot commands"],
-                  ["Hosting", "Mini PC + Remote Access + Cloudflare"],
+                  ["Hosting", "Mini PC + Remote Access + Public Routing"],
                   ["Backup", "Nightly to local NAS (+$600)"],
                   ["Monthly cost", "≈ $20 stack + $15–30 SMS"],
                 ].map(([k, v]) => (
