@@ -99,7 +99,7 @@ const Hero = () => {
       <div className="absolute inset-0 hero-wash pointer-events-none" aria-hidden="true" />
 
       <div className="container max-w-[1680px] mx-auto px-6 pt-20 md:pt-28 pb-20 md:pb-28 relative">
-        <div className="grid lg:grid-cols-12 gap-12 lg:gap-16 items-center">
+        <div className="grid lg:grid-cols-12 gap-12 lg:gap-16 items-center lg:min-h-[620px]">
           {/* Left - copy */}
           <div className="lg:col-span-7">
             <div key={`h-${active}`} className="animate-fade-in">
